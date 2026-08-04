@@ -9,7 +9,10 @@ State lives in the URL hash, so any view is copy-pasteable:
 - `#claude-fable-5` — deep-link a model; it scrolls into view highlighted
 - `#co=anthropic,openai` — show only those labs
 - `#claude-opus-5&co=anthropic` — both at once
+- `#co=all` — every lab
 - `#co=none` — start from nothing and build up
+
+No `co=` in the URL shows the default view: Anthropic, OpenAI, and Google.
 
 ## Stack
 
