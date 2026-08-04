@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Release dates of major AI models, linkable by row, with live ages.">
+<title>AI Model Release Timeline</title>
+<style>
+:root{
+  --ground:#10141F; --ink:#E9E7DF; --muted:#8B90A0; --hair:#242A3B;
+  --amber:#E8A33D; --card:#161B2A; --flash:#2A2438;
+}
+body{background:var(--ground);color:var(--ink);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;
+  padding:56px 20px 100px;}
+.wrap{max-width:760px;margin:0 auto;}
+h1{font:700 clamp(30px,6vw,44px)/1.1 Charter,Georgia,"Times New Roman",serif;
+  letter-spacing:-.01em;text-wrap:balance;}
+h1 em{color:var(--amber);font-style:normal;}
+.sub{color:var(--muted);margin:14px 0 8px;max-width:56ch;}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 10px;align-items:center;}
+.chip{display:inline-flex;align-items:center;gap:7px;cursor:pointer;
+  font:12px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink);
+  background:var(--card);border:1px solid var(--hair);border-radius:999px;padding:6px 12px;}
+.chip[aria-pressed=false]{color:var(--muted);opacity:.5;}
+.chip[aria-pressed=false] .dot{background:transparent;box-shadow:inset 0 0 0 1.5px var(--muted);}
+.chip:hover{border-color:var(--amber);}
+.chip:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+.reset{background:none;border:none;cursor:pointer;color:var(--amber);
+  font:12px ui-monospace,Menlo,monospace;padding:6px 4px;text-decoration:underline;
+  text-underline-offset:3px;}
+.reset:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+.hint{font:12px ui-monospace,Menlo,monospace;color:var(--muted);margin:0 0 40px;}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none;}
+.year{font:700 13px/1 ui-monospace,Menlo,monospace;letter-spacing:.22em;color:var(--amber);
+  margin:40px 0 6px;padding-bottom:8px;border-bottom:1px solid var(--hair);}
+.entry{display:grid;grid-template-columns:118px 1fr;gap:0 22px;position:relative;
+  padding:16px 10px 16px 0;border-left:1px solid var(--hair);padding-left:26px;
+  margin-left:6px;scroll-margin-top:60px;border-radius:0 8px 8px 0;}
+.entry::before{content:"";position:absolute;left:-5px;top:24px;width:9px;height:9px;
+  border-radius:50%;background:var(--c,var(--muted));}
+.entry.linked{background:var(--flash);outline:1px solid color-mix(in srgb,var(--amber) 45%,transparent);}
+.when{font:600 14px/1.5 ui-monospace,Menlo,monospace;color:var(--amber);padding-top:3px;}
+.when small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:3px;}
+.what a{font:600 20px/1.25 Charter,Georgia,serif;color:var(--ink);text-decoration:none;}
+.what a:hover{color:var(--amber);}
+.meta{color:var(--muted);font-size:13.5px;margin-top:2px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.ow{font:600 10px/1 ui-monospace,monospace;letter-spacing:.1em;color:#8FD3A8;
+  border:1px solid #2E4A3A;border-radius:4px;padding:3px 6px;}
+.meta a.ann{font:400 13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--muted);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-color:var(--hair);}
+.meta a.ann:hover{color:var(--amber);text-decoration-color:var(--amber);}
+.meta a.ann:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+.copy{background:none;border:1px solid var(--hair);border-radius:5px;color:var(--muted);
+  font:12px ui-monospace,monospace;padding:3px 8px;cursor:pointer;}
+.copy:hover{color:var(--amber);border-color:var(--amber);}
+.copy:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+footer{color:var(--muted);font-size:13px;margin-top:56px;}
+@media (max-width:560px){.entry{grid-template-columns:1fr;gap:4px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>The release clock, <em>newest first</em></h1>
+<p class="sub">Every major model drop since ChatGPT, with its exact age today. Anchor-link any entry.</p>
+<div class="legend" id="legend" role="group" aria-label="Toggle companies"></div>
+<p class="hint">Click a lab to show or hide its models. The URL updates as you go, so the filtered view is copy-pasteable.</p>
+<main id="stream"></main>
+<footer>Announcement dates verified August 2026 · closed unless marked open · ages recompute on each visit.</footer>
+</div>
+<script>
+const CO={Anthropic:"#E08D6D",OpenAI:"#74C0A6",Google:"#6E9BF0",Meta:"#B48CE8",
+DeepSeek:"#5FC9E0",Alibaba:"#E86FA4",xAI:"#C9CDD6",Mistral:"#A6D65E",
+"Moonshot AI":"#8FB4FF","MiniMax":"#FF9DB0"};
+const MODELS=[
+["qwen3-8-max","Qwen3.8 Max","Alibaba","2026-08-02",1],
+["qwen3-7-flash","Qwen3.7 Flash","Alibaba","2026-07-27",1],
+["claude-opus-5","Claude Opus 5","Anthropic","2026-07-24",0],
+["gemini-3-6-flash","Gemini 3.6 Flash","Google","2026-07-21",0],
+["gpt-5-6","GPT-5.6","OpenAI","2026-07-09",0],
+["claude-sonnet-5","Claude Sonnet 5","Anthropic","2026-06-30",0],
+["claude-fable-5","Claude Fable 5 / Mythos 5","Anthropic","2026-06-09",0],
+["minimax-m3","MiniMax M3","MiniMax","2026-06-01",1],
+["claude-opus-4-8","Claude Opus 4.8","Anthropic","2026-05-28",0],
+["mistral-medium-3-5","Mistral Medium 3.5","Mistral","2026-04-29",0],
+["deepseek-v4-preview","DeepSeek V4 (preview)","DeepSeek","2026-04-24",1],
+["gpt-5-5","GPT-5.5","OpenAI","2026-04-23",0],
+["claude-opus-4-7","Claude Opus 4.7","Anthropic","2026-04-16",0],
+["gpt-5-4","GPT-5.4","OpenAI","2026-03-05",0],
+["gemini-3-1-pro","Gemini 3.1 Pro","Google","2026-02-19",0],
+["claude-sonnet-4-6","Claude Sonnet 4.6","Anthropic","2026-02-17",0],
+["claude-opus-4-6","Claude Opus 4.6","Anthropic","2026-02-05",0],
+["gpt-5-3-codex","GPT-5.3-Codex","OpenAI","2026-02-05",0],
+["gpt-5-2","GPT-5.2","OpenAI","2025-12-11",0],
+["claude-opus-4-5","Claude Opus 4.5","Anthropic","2025-11-24",0],
+["gemini-3-pro","Gemini 3 Pro","Google","2025-11-18",0],
+["gpt-5-1","GPT-5.1","OpenAI","2025-11-12",0],
+["claude-haiku-4-5","Claude Haiku 4.5","Anthropic","2025-10-15",0],
+["claude-sonnet-4-5","Claude Sonnet 4.5","Anthropic","2025-09-29",0],
+["gpt-5","GPT-5","OpenAI","2025-08-07",0],
+["claude-opus-4-1","Claude Opus 4.1","Anthropic","2025-08-05",0],
+["gpt-oss","gpt-oss-120b / 20b","OpenAI","2025-08-05",1],
+["kimi-k2","Kimi K2","Moonshot AI","2025-07-11",1],
+["grok-4","Grok 4","xAI","2025-07-09",0],
+["claude-opus-4","Claude Opus 4 & Sonnet 4","Anthropic","2025-05-22",0],
+["qwen-3","Qwen 3","Alibaba","2025-04-28",1],
+["o3","OpenAI o3","OpenAI","2025-04-16",0],
+["llama-4","Llama 4 (Scout & Maverick)","Meta","2025-04-05",1],
+["gemini-2-5-pro","Gemini 2.5 Pro","Google","2025-03-25",0],
+["gpt-4-5","GPT-4.5","OpenAI","2025-02-27",0],
+["claude-3-7-sonnet","Claude 3.7 Sonnet","Anthropic","2025-02-24",0],
+["grok-3","Grok 3","xAI","2025-02-17",0],
+["deepseek-r1","DeepSeek-R1","DeepSeek","2025-01-20",1],
+["deepseek-v3","DeepSeek-V3","DeepSeek","2024-12-26",1],
+["gemini-2-0-flash","Gemini 2.0 Flash","Google","2024-12-11",0],
+["o1","OpenAI o1","OpenAI","2024-12-05",0],
+["claude-3-5-haiku","Claude 3.5 Haiku","Anthropic","2024-10-22",0],
+["qwen-2-5","Qwen 2.5","Alibaba","2024-09-19",1],
+["llama-3-1","Llama 3.1 405B","Meta","2024-07-23",1],
+["claude-3-5-sonnet","Claude 3.5 Sonnet","Anthropic","2024-06-20",0],
+["gpt-4o","GPT-4o","OpenAI","2024-05-13",0],
+["llama-3","Llama 3","Meta","2024-04-18",1],
+["claude-3","Claude 3 (Opus, Sonnet, Haiku)","Anthropic","2024-03-04",0],
+["gemini-1-5-pro","Gemini 1.5 Pro","Google","2024-02-15",0],
+["mixtral-8x7b","Mixtral 8x7B","Mistral","2023-12-11",1],
+["gemini-1","Gemini 1.0","Google","2023-12-06",0],
+["llama-2","Llama 2","Meta","2023-07-18",1],
+["claude-2","Claude 2","Anthropic","2023-07-11",0],
+["gpt-4","GPT-4","OpenAI","2023-03-14",0],
+["claude-1","Claude 1","Anthropic","2023-03-14",0],
+["chatgpt-gpt-3-5","ChatGPT (GPT-3.5)","OpenAI","2022-11-30",0],
+];
+const ANN={
+"claude-1":"https://www.anthropic.com/news/introducing-claude",
+"claude-2":"https://www.anthropic.com/news/claude-2",
+"claude-3":"https://www.anthropic.com/news/claude-3-family",
+"claude-3-5-sonnet":"https://www.anthropic.com/news/claude-3-5-sonnet",
+"claude-3-5-haiku":"https://www.anthropic.com/news/3-5-models-and-computer-use",
+"claude-3-7-sonnet":"https://www.anthropic.com/news/claude-3-7-sonnet",
+"claude-opus-4":"https://www.anthropic.com/news/claude-4",
+"claude-opus-4-1":"https://www.anthropic.com/news/claude-opus-4-1",
+"claude-sonnet-4-5":"https://www.anthropic.com/news/claude-sonnet-4-5",
+"claude-haiku-4-5":"https://www.anthropic.com/news/claude-haiku-4-5",
+"claude-opus-4-5":"https://www.anthropic.com/news/claude-opus-4-5",
+"claude-opus-4-7":"https://www.anthropic.com/news/claude-opus-4-7",
+"claude-fable-5":"https://www.anthropic.com/news/claude-fable-5-mythos-5",
+"claude-sonnet-5":"https://www.anthropic.com/news/claude-sonnet-5",
+"chatgpt-gpt-3-5":"https://openai.com/index/chatgpt/",
+"gpt-4":"https://openai.com/index/gpt-4-research/",
+"gpt-4o":"https://openai.com/index/hello-gpt-4o/",
+"gpt-4-5":"https://openai.com/index/introducing-gpt-4-5/",
+"o3":"https://openai.com/index/introducing-o3-and-o4-mini/",
+"gpt-oss":"https://openai.com/index/introducing-gpt-oss/",
+"gpt-5":"https://openai.com/index/introducing-gpt-5/",
+"gpt-5-2":"https://openai.com/index/introducing-gpt-5-2/",
+"gemini-1":"https://blog.google/technology/ai/google-gemini-ai/",
+"gemini-1-5-pro":"https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/",
+"gemini-2-0-flash":"https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/",
+"gemini-2-5-pro":"https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/",
+"llama-2":"https://ai.meta.com/blog/llama-2/",
+"llama-3":"https://ai.meta.com/blog/meta-llama-3/",
+"llama-3-1":"https://ai.meta.com/blog/meta-llama-3-1/",
+"llama-4":"https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+"mixtral-8x7b":"https://mistral.ai/news/mixtral-of-experts",
+"qwen-2-5":"https://qwenlm.github.io/blog/qwen2.5/",
+"qwen-3":"https://qwenlm.github.io/blog/qwen3/",
+"grok-3":"https://x.ai/news/grok-3",
+"claude-opus-4-6":"https://www.anthropic.com/news/claude-opus-4-6",
+"claude-sonnet-4-6":"https://www.anthropic.com/news/claude-sonnet-4-6",
+"claude-opus-4-8":"https://www.anthropic.com/news/claude-opus-4-8",
+"claude-opus-5":"https://www.anthropic.com/news/claude-opus-5",
+"gpt-5-3-codex":"https://openai.com/index/introducing-gpt-5-3-codex/",
+"gpt-5-4":"https://openai.com/index/introducing-gpt-5-4/",
+"gpt-5-5":"https://openai.com/index/introducing-gpt-5-5/",
+"gpt-5-6":"https://openai.com/index/gpt-5-6/",
+"gpt-5-1":"https://openai.com/index/gpt-5-1/",
+"o1":"https://openai.com/index/introducing-chatgpt-pro/",
+"gemini-3-pro":"https://blog.google/products/gemini/gemini-3/",
+"gemini-3-1-pro":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+"gemini-3-6-flash":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+"deepseek-v3":"https://api-docs.deepseek.com/news/news1226/",
+"deepseek-r1":"https://api-docs.deepseek.com/news/news250120/",
+"deepseek-v4-preview":"https://api-docs.deepseek.com/news/news260424/",
+"qwen3-7-flash":"https://openrouter.ai/qwen/qwen3.7-flash",
+"qwen3-8-max":"https://qwen.ai/blog?id=qwen3.8",
+"mistral-medium-3-5":"https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+"minimax-m3":"https://www.minimax.io/blog/minimax-m3",
+"grok-4":"https://x.ai/news/grok-4",
+"kimi-k2":"https://moonshotai.github.io/Kimi-K2/",
+};
+function age(iso){
+  const [y,m,d]=iso.split("-").map(Number),now=new Date();
+  let yy=now.getFullYear()-y,mm=now.getMonth()+1-m,dd=now.getDate()-d;
+  if(dd<0){mm--;dd+=new Date(now.getFullYear(),now.getMonth(),0).getDate();}
+  if(mm<0){yy--;mm+=12;}
+  const p=[];if(yy)p.push(yy+(yy>1?" yrs":" yr"));if(mm)p.push(mm+" mo");p.push(dd+(dd===1?" day":" days"));
+  return p.join(" ")+" old";
+}
+const fmt=iso=>{const [y,m,d]=iso.split("-").map(Number);
+  return new Date(y,m-1,d).toLocaleDateString("en-US",{month:"short",day:"numeric"});};
+const coSlug=co=>co.toLowerCase().replace(/[^a-z0-9]+/g,"-");
+const ALL=Object.keys(CO);
+let enabled=new Set(ALL);
+let anchor="";
+
+// Hash grammar: #<model-slug>&co=anthropic,openai — either part optional.
+function parseHash(){
+  anchor="";
+  enabled=new Set(ALL);
+  for(const part of location.hash.slice(1).split("&")){
+    if(!part)continue;
+    if(part.startsWith("co=")){
+      if(part==="co=none"){enabled=new Set();continue;}
+      const want=part.slice(3).split(",").filter(Boolean);
+      const match=ALL.filter(c=>want.includes(coSlug(c)));
+      if(match.length)enabled=new Set(match);
+    }else anchor=part;
+  }
+}
+function hashFor(slug){
+  const parts=[];
+  if(slug)parts.push(slug);
+  if(enabled.size===0)parts.push("co=none");
+  else if(enabled.size<ALL.length)parts.push("co="+ALL.filter(c=>enabled.has(c)).map(coSlug).join(","));
+  return parts.length?"#"+parts.join("&"):"";
+}
+function writeHash(){history.replaceState(null,"",hashFor(anchor)||location.pathname+location.search);}
+
+function renderLegend(){
+  document.getElementById("legend").innerHTML=ALL.map(co=>
+    `<button class="chip" data-co="${co}" aria-pressed="${enabled.has(co)}">
+     <i class="dot" style="background:${CO[co]}"></i>${co}</button>`).join("")+
+    (enabled.size<ALL.length?'<button class="reset" id="reset">show all</button>':"")+
+    (enabled.size>0?'<button class="reset" id="clear">hide all</button>':"");
+}
+function renderStream(){
+  let html="",lastYear="";
+  for(const [slug,name,co,date,open] of MODELS){
+    if(!enabled.has(co))continue;
+    const yr=date.slice(0,4);
+    if(yr!==lastYear){html+=`<div class="year">${yr}</div>`;lastYear=yr;}
+    html+=`<article class="entry" id="${slug}" style="--c:${CO[co]}">
+    <div class="when">${fmt(date)}<small>${age(date)}</small></div>
+    <div class="what"><a href="${hashFor(slug)}">${name}</a>
+      <div class="meta"><span>${co}</span>${open?'<span class="ow">OPEN WEIGHTS</span>':""}
+      ${ANN[slug]?`<a class="ann" href="${ANN[slug]}" target="_blank" rel="noopener">announcement ↗</a>`:""}
+      <button class="copy" data-slug="${slug}" aria-label="Copy link to ${name}">copy link</button></div>
+    </div></article>`;
+  }
+  document.getElementById("stream").innerHTML=
+    html||'<p class="hint">Every lab is hidden. Pick one above to bring its releases back.</p>';
+}
+function render(){renderLegend();renderStream();mark(anchor,false);}
+
+document.getElementById("legend").addEventListener("click",e=>{
+  const chip=e.target.closest(".chip");
+  if(chip){
+    const co=chip.dataset.co;
+    enabled.has(co)?enabled.delete(co):enabled.add(co);
+  }else if(e.target.closest("#reset")){
+    enabled=new Set(ALL);
+  }else if(e.target.closest("#clear")){
+    enabled=new Set();
+  }else return;
+  writeHash();render();
+});
+document.getElementById("stream").addEventListener("click",e=>{
+  const b=e.target.closest(".copy");if(!b)return;
+  anchor=b.dataset.slug;
+  writeHash();
+  const url=location.href.split("#")[0]+hashFor(anchor);
+  navigator.clipboard.writeText(url).then(()=>{b.textContent="copied ✓";setTimeout(()=>b.textContent="copy link",1200);});
+  mark(anchor,false);
+});
+function mark(slug,scroll){
+  document.querySelectorAll(".entry.linked").forEach(t=>t.classList.remove("linked"));
+  const el=slug&&document.getElementById(slug);if(!el)return;
+  el.classList.add("linked");if(scroll)el.scrollIntoView({block:"center"});
+}
+addEventListener("hashchange",()=>{parseHash();render();mark(anchor,true);});
+parseHash();render();if(anchor)mark(anchor,true);
+</script>
+</body>
+</html>
