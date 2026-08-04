@@ -206,17 +206,19 @@ const fmt=iso=>{const [y,m,d]=iso.split("-").map(Number);
   return new Date(y,m-1,d).toLocaleDateString("en-US",{month:"short",day:"numeric"});};
 const coSlug=co=>co.toLowerCase().replace(/[^a-z0-9]+/g,"-");
 const ALL=Object.keys(CO);
-let enabled=new Set(ALL);
+const DEFAULT=["Anthropic","OpenAI","Google"];
+let enabled=new Set(DEFAULT);
 let anchor="";
 
 // Hash grammar: #<model-slug>&co=anthropic,openai — either part optional.
 function parseHash(){
   anchor="";
-  enabled=new Set(ALL);
+  enabled=new Set(DEFAULT);
   for(const part of location.hash.slice(1).split("&")){
     if(!part)continue;
     if(part.startsWith("co=")){
       if(part==="co=none"){enabled=new Set();continue;}
+      if(part==="co=all"){enabled=new Set(ALL);continue;}
       const want=part.slice(3).split(",").filter(Boolean);
       const match=ALL.filter(c=>want.includes(coSlug(c)));
       if(match.length)enabled=new Set(match);
@@ -226,8 +228,11 @@ function parseHash(){
 function hashFor(slug){
   const parts=[];
   if(slug)parts.push(slug);
-  if(enabled.size===0)parts.push("co=none");
-  else if(enabled.size<ALL.length)parts.push("co="+ALL.filter(c=>enabled.has(c)).map(coSlug).join(","));
+  const isDefault=enabled.size===DEFAULT.length&&DEFAULT.every(c=>enabled.has(c));
+  if(isDefault){}
+  else if(enabled.size===0)parts.push("co=none");
+  else if(enabled.size===ALL.length)parts.push("co=all");
+  else parts.push("co="+ALL.filter(c=>enabled.has(c)).map(coSlug).join(","));
   return parts.length?"#"+parts.join("&"):"";
 }
 function writeHash(){history.replaceState(null,"",hashFor(anchor)||location.pathname+location.search);}
