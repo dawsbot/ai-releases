@@ -18,6 +18,10 @@
 - Two-col entry grid: mono date + age on left, serif model name right
 - Deliberately dark-committed (single theme); no light variant
 
+## Favicon
+- "One amber drop": navy `#10141F` rounded square, hairline `#4A5268` ring, solid amber `#E8A33D` dot
+- Shipped as an inline SVG data URI in `index.html`; chosen by Dawson 2026-08-04 over spine-dot, clock, and serif-monogram candidates
+
 ## Reference pages already built in this system
 - Timeline artifact ("The release clock, newest first"), chosen by Dawson
   2026-08-04 over Registry (light table) and Almanac (per-lab, green paper)
