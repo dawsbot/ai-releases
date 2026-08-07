@@ -214,9 +214,11 @@ let anchor="";
 function parseHash(){
   anchor="";
   enabled=new Set(DEFAULT);
+  let sawCo=false;
   for(const part of location.hash.slice(1).split("&")){
     if(!part)continue;
     if(part.startsWith("co=")){
+      sawCo=true;
       if(part==="co=none"){enabled=new Set();continue;}
       if(part==="co=all"){enabled=new Set(ALL);continue;}
       const want=part.slice(3).split(",").filter(Boolean);
@@ -224,15 +226,19 @@ function parseHash(){
       if(match.length)enabled=new Set(match);
     }else anchor=part;
   }
+  if(anchor&&!sawCo)enabled=new Set(ALL);
 }
 function hashFor(slug){
   const parts=[];
   if(slug)parts.push(slug);
   const isDefault=enabled.size===DEFAULT.length&&DEFAULT.every(c=>enabled.has(c));
-  if(isDefault){}
-  else if(enabled.size===0)parts.push("co=none");
+  const list=()=>ALL.filter(c=>enabled.has(c)).map(coSlug).join(",");
+  if(slug){
+    if(enabled.size!==ALL.length)parts.push(enabled.size===0?"co=none":"co="+list());
+  }
   else if(enabled.size===ALL.length)parts.push("co=all");
-  else parts.push("co="+ALL.filter(c=>enabled.has(c)).map(coSlug).join(","));
+  else if(enabled.size===0)parts.push("co=none");
+  else if(!isDefault)parts.push("co="+list());
   return parts.length?"#"+parts.join("&"):"";
 }
 function writeHash(){history.replaceState(null,"",hashFor(anchor)||location.pathname+location.search);}
