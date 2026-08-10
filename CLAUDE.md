@@ -1,6 +1,6 @@
 # AI Releases
 
-One static `index.html`, no build step. Deployed on Vercel (`vercel deploy --prod`); the GitHub repo is NOT linked to Vercel, so pushing does not deploy. Design tokens live in `DESIGN_SYSTEM.md` — read it before any visual change.
+One static `index.html`, no build step. Deployed on Vercel: the GitHub repo is connected, so every push to `main` auto-deploys to production (https://ai-releases.vercel.app). `vercel deploy --prod` also works for manual deploys. Design tokens live in `DESIGN_SYSTEM.md` — read it before any visual change.
 
 ## Data rules (learned the hard way)
 
