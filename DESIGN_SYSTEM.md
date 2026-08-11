@@ -10,7 +10,7 @@
 - Ink: warm paper `#E9E7DF`, muted `#8B90A0`
 - Accent: amber `#E8A33D` (dates, year markers, hover, focus)
 - Linked-row flash: `#2A2438`
-- Company dots: Anthropic `#E08D6D`, OpenAI `#74C0A6`, Google `#6E9BF0`, Meta `#B48CE8`, DeepSeek `#5FC9E0`, Alibaba `#E86FA4`, xAI `#C9CDD6`, Mistral `#A6D65E`, Moonshot `#8FB4FF`, MiniMax `#FF9DB0`, Cohere `#D4A276` (light umber, kept apart from Anthropic coral and amber accent), Databricks `#E4625F` (soft red)
+- Company dots: Anthropic `#E08D6D`, OpenAI `#74C0A6`, Google `#6E9BF0`, Meta `#B48CE8`, DeepSeek `#5FC9E0`, Alibaba `#E86FA4`, xAI `#C9CDD6`, Mistral `#A6D65E`, Moonshot `#8FB4FF`, MiniMax `#FF9DB0`, Cohere `#D4A276` (light umber, kept apart from Anthropic coral and amber accent), Databricks `#E4625F` (soft red), NVIDIA `#63D84B` (brand green, pushed greener than Mistral's yellow-lime to stay distinct)
 
 ## Layout language
 - Single 760px column, vertical spine timeline with left border + company dot
