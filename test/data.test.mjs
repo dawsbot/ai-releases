@@ -48,6 +48,29 @@ const REQUIRED_ENTRIES = [
     open: 0,
     ann: "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
   },
+  // Repaired by the 2026-09-19 run: released in or before the audited window
+  // but absent from the timeline until then.
+  {
+    slug: "minimax-h3",
+    co: "MiniMax",
+    date: "2026-07-31",
+    open: 1,
+    ann: "https://www.minimax.io/blog/minimax-h3",
+  },
+  {
+    slug: "granite-4-2",
+    co: "IBM",
+    date: "2026-08-25",
+    open: 1,
+    ann: "https://research.ibm.com/blog/introducing-granite-4-2",
+  },
+  {
+    slug: "spark-x2-5-4b",
+    co: "iFlytek",
+    date: "2026-09-01",
+    open: 1,
+    ann: "https://huggingface.co/XHToken/Spark-X2.5-4B",
+  },
 ];
 
 for (const want of REQUIRED_ENTRIES) {
