@@ -18,4 +18,14 @@ An empty hash shows the default view: Anthropic, OpenAI, and Google. A bare mode
 
 One static `index.html`. No build, no dependencies. Deployed on Vercel.
 
-Dates are announcement dates, verified against public sources August 2026. Design tokens live in `DESIGN_SYSTEM.md`.
+Dates are announcement dates, verified against public sources September 2026. Design tokens live in `DESIGN_SYSTEM.md`.
+
+## Data updates & tests
+
+What counts as a release, how discovery must be done, and how each update run is audited is defined in [`docs/update-policy.md`](docs/update-policy.md). Validate the data before deploying:
+
+```
+node --test test/data.test.mjs
+```
+
+The suite is dependency-free (`node:test`); it parses the live `MODELS` / `ANN` / `CO` data out of `index.html` and checks slugs, dates, ordering, link coverage, and slug stability.
