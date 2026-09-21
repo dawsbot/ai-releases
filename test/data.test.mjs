@@ -71,6 +71,25 @@ const REQUIRED_ENTRIES = [
     open: 1,
     ann: "https://huggingface.co/XHToken/Spark-X2.5-4B",
   },
+  // Repaired by the 2026-09-21 run: Intern-S2 was the top carried candidate
+  // for three runs (announced Sep 13, Pujiang Innovation Forum, dated by
+  // InternLM's own WeChat article), and the Inworld Flash row had shipped
+  // with the Sep 2 press-beat date instead of Inworld's own release-notes
+  // date of Aug 9 (proven via an Aug 29 archive.org snapshot).
+  {
+    slug: "intern-s2",
+    co: "Shanghai AI Lab",
+    date: "2026-09-13",
+    open: 1,
+    ann: "https://mp.weixin.qq.com/s/EZghVJB13rJTRfBv2_U0Xw",
+  },
+  {
+    slug: "realtime-tts-2-flash",
+    co: "Inworld",
+    date: "2026-08-09",
+    open: 0,
+    ann: "https://inworld.ai/resources/tts-2-vs-tts-2-flash",
+  },
 ];
 
 for (const want of REQUIRED_ENTRIES) {
