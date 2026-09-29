@@ -90,6 +90,31 @@ const REQUIRED_ENTRIES = [
     open: 0,
     ann: "https://inworld.ai/resources/tts-2-vs-tts-2-flash",
   },
+  // Repaired by the 2026-09-29 catch-up run: two releases missing from the
+  // timeline (never reconciled in any audit), plus the Hy Image3.5 preview
+  // carry from 2026-09-22 resolved via Hunyuan's own X post (snowflake
+  // decodes to 2026-09-22T02:40:42Z).
+  {
+    slug: "grok-voice-think-fast-2",
+    co: "xAI",
+    date: "2026-07-29",
+    open: 0,
+    ann: "https://x.ai/news/grok-voice-think-fast-2",
+  },
+  {
+    slug: "paddleocr-vl-1-6",
+    co: "Baidu",
+    date: "2026-05-28",
+    open: 1,
+    ann: "https://x.com/PaddlePaddle/status/2059990434827661769",
+  },
+  {
+    slug: "hy-image3-5-preview",
+    co: "Tencent",
+    date: "2026-09-22",
+    open: 0,
+    ann: "https://x.com/TencentHunyuan/status/2102226552310419473",
+  },
 ];
 
 for (const want of REQUIRED_ENTRIES) {
