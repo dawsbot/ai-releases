@@ -115,6 +115,53 @@ const REQUIRED_ENTRIES = [
     open: 0,
     ann: "https://x.com/TencentHunyuan/status/2102226552310419473",
   },
+  // Repaired by the 2026-09-30 run: in-window releases the Sep 29 catch-up
+  // missed (FLUX 3 Action, Nemotron 3 Diarization, AliceAI Foundation,
+  // decision-model-preview, Eleven v4) plus the Qwen3.8-LiveTranslate carry,
+  // which an earlier run had wrongly dismissed as a tracker error (real:
+  // @Alibaba_Qwen status 2101206705111757253, snowflake 2026-09-19T07:08Z).
+  {
+    slug: "flux-3-action",
+    co: "Black Forest Labs",
+    date: "2026-09-23",
+    open: 1,
+    ann: "https://bfl.ai/blog/flux-3-action",
+  },
+  {
+    slug: "nemotron-3-diarization",
+    co: "NVIDIA",
+    date: "2026-09-23",
+    open: 1,
+    ann: "https://huggingface.co/blog/nvidia/nemotron-diarization",
+  },
+  {
+    slug: "aliceai-foundation-80b-a3b",
+    co: "Yandex",
+    date: "2026-09-21",
+    open: 1,
+    ann: "https://ir.yandex/press-releases?year=2026&id=2026-09-21",
+  },
+  {
+    slug: "decision-model-preview",
+    co: "Alibaba",
+    date: "2026-09-24",
+    open: 0,
+    ann: "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+  },
+  {
+    slug: "eleven-v4",
+    co: "ElevenLabs",
+    date: "2026-09-28",
+    open: 0,
+    ann: "https://elevenlabs.io/blog/eleven-v4",
+  },
+  {
+    slug: "qwen3-8-livetranslate",
+    co: "Alibaba",
+    date: "2026-09-19",
+    open: 0,
+    ann: "https://x.com/Alibaba_Qwen/status/2101206705111757253",
+  },
 ];
 
 for (const want of REQUIRED_ENTRIES) {
