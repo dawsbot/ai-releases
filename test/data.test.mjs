@@ -162,6 +162,50 @@ const REQUIRED_ENTRIES = [
     open: 0,
     ann: "https://x.com/Alibaba_Qwen/status/2101206705111757253",
   },
+  // Repaired by the 2026-10-01 run: carried candidates resolved or releases
+  // missed by earlier sweeps of their windows.
+  {
+    slug: "d1",
+    co: "Liquid AI",
+    date: "2026-09-29",
+    open: 0,
+    ann: "https://x.com/liquidai/status/2105003472332693869",
+  },
+  {
+    slug: "kumo-tabular",
+    co: "NVIDIA",
+    date: "2026-09-28",
+    open: 1,
+    ann: "https://huggingface.co/blog/nvidia/kumo-tabular",
+  },
+  {
+    slug: "mimo-v2-6-mopd",
+    co: "Xiaomi",
+    date: "2026-09-27",
+    open: 1,
+    ann: "https://mimo.xiaomi.com/blog/mimo-v2-6-tool-call-repetition",
+  },
+  {
+    slug: "ming-image-0-1-design",
+    co: "Ant Group",
+    date: "2026-09-23",
+    open: 1,
+    ann: "https://mp.weixin.qq.com/s/VGdtxfM8kbHIQJw50VD_Sw",
+  },
+  {
+    slug: "hemmingway-1",
+    co: "Hemmingway",
+    date: "2026-09-22",
+    open: 1,
+    ann: "https://hemmingway.io/blog/what-is-hemmingway/",
+  },
+  {
+    slug: "solar-mini-4",
+    co: "Upstage",
+    date: "2026-09-22",
+    open: 0,
+    ann: "https://www.upstage.ai/blog/en/solar-mini-4",
+  },
 ];
 
 for (const want of REQUIRED_ENTRIES) {
