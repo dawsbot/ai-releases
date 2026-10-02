@@ -69,7 +69,10 @@ const REQUIRED_ENTRIES = [
     co: "iFlytek",
     date: "2026-09-01",
     open: 1,
-    ann: "https://huggingface.co/XHToken/Spark-X2.5-4B",
+    // ANN upgraded 2026-10-02: the HF model page was the no-announcement
+    // fallback; the pair's real dated announcement is SparkLLM's official
+    // dev.to post (channel verified via the GitHub README badge row).
+    ann: "https://dev.to/sparkllm/spark-x25-4b-17b-the-only-on-device-models-with-native-1m-token-context-now-open-source-d9o",
   },
   // Repaired by the 2026-09-21 run: Intern-S2 was the top carried candidate
   // for three runs (announced Sep 13, Pujiang Innovation Forum, dated by
@@ -205,6 +208,34 @@ const REQUIRED_ENTRIES = [
     date: "2026-09-22",
     open: 0,
     ann: "https://www.upstage.ai/blog/en/solar-mini-4",
+  },
+  {
+    slug: "ling-3-1-flash",
+    co: "Ant Group",
+    date: "2026-09-30",
+    open: 0,
+    ann: "https://x.com/AntLingAGI/status/2105335205741596911",
+  },
+  {
+    slug: "holo4",
+    co: "H Company",
+    date: "2026-09-28",
+    open: 1,
+    ann: "https://www.hcompany.ai/newsroom/holo4",
+  },
+  {
+    slug: "span-01",
+    co: "Respan",
+    date: "2026-09-24",
+    open: 0,
+    ann: "https://respan.ai/blog/introducing-span-1",
+  },
+  {
+    slug: "kumo-relational",
+    co: "NVIDIA",
+    date: "2026-08-18",
+    open: 1,
+    ann: "https://build.nvidia.com/nvidia/kumo-relational/modelcard",
   },
 ];
 
