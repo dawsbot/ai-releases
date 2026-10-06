@@ -93,8 +93,11 @@ Xiaomi:"#FF7A00","dots studio":"#FF3355",
 Ideogram:"#2D9CDB",Hemmingway:"#94618E",
 Cloudflare:"#D95B18",Amazon:"#FF9900",Respan:"#7CB518",NaiveAI:"#D14DC4",
 "Aleph Alpha":"#00B377",Bilibili:"#E91E8C","Supersonic Labs":"#324FC7",
-"Ai2":"#D00000","Together AI":"#083D77","Kling AI":"#00F5D4",Tavus:"#FFC6FF",Apodex:"#8AC926"};
+"Ai2":"#D00000","Together AI":"#083D77","Kling AI":"#00F5D4",Tavus:"#FFC6FF",Apodex:"#8AC926",
+"Reflection AI":"#1FB6FF",TII:"#C8A800","AutoTrust AI Lab":"#A4133C"};
 const MODELS=[
+["falcon-emirati-7b","Falcon-Emirati-7B","TII","2026-10-06",0],
+["beam","Beam","Reflection AI","2026-10-05",0],
 ["kolibri-1","Kolibri 1","Aleph Alpha","2026-10-03",1],
 ["astabrief","AstaBrief","Ai2","2026-10-02",1],
 ["reka-ridm","Reka Inverse Dynamics Model","Reka","2026-10-02",1],
@@ -114,6 +117,7 @@ const MODELS=[
 ["mercury-decide","Mercury Decide","Inception","2026-09-30",0],
 ["pplx-embed-v2-context-9b-preview","pplx-embed-v2-context-9b-preview","Perplexity","2026-09-30",1],
 ["ling-3-1-flash","Ling-3.1-flash","Ant Group","2026-09-30",0],
+["jev-27b-vl","JEV-27B-VL","AutoTrust AI Lab","2026-09-30",1],
 ["gpt-6-1-sol","GPT-6.1 Sol","OpenAI","2026-09-29",0],
 ["d1","d1","Liquid AI","2026-09-29",0],
 ["claude-sonnet-5-5","Claude Sonnet 5.5","Anthropic","2026-09-28",0],
@@ -122,6 +126,7 @@ const MODELS=[
 ["holo4","Holo4 (27B & 35B-A3B) & Holotron4 Nano","H Company","2026-09-28",1],
 ["kling-4-0-flash","Kling 4.0 Flash","Kling AI","2026-09-28",0],
 ["naive-n0-5-flash","Naive-N0.5-Flash","NaiveAI","2026-09-27",1],
+["jev-27b","JEV-27B","AutoTrust AI Lab","2026-09-27",1],
 ["minimax-m3-1-flash-preview","MiniMax-M3.1-Flash-Preview","MiniMax","2026-09-27",0],
 ["mimo-v2-6-mopd","MiMo-V2.6 MOPD (Flash & Pro)","Xiaomi","2026-09-27",1],
 ["julia-1","Julia-1","Supersonic Labs","2026-09-26",1],
@@ -410,6 +415,10 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"falcon-emirati-7b":"https://huggingface.co/blog/tiiuae/falcon-emirati",
+"beam":"https://reflection.ai/blog/introducing-beam",
+"jev-27b-vl":"https://huggingface.co/blog/autotrust/autotrustjev-27b-vl-a-decision-model-that-learned",
+"jev-27b":"https://huggingface.co/blog/autotrust/autotrustjev-27b-fast-calibrated-decisions-and-ful",
 "astabrief":"https://allenai.org/blog/astabrief",
 "suno-speech":"https://suno.com/blog/introducing-speech-beta",
 "griffin-lite":"https://www.tavus.io/griffin",
