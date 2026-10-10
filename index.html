@@ -95,9 +95,13 @@ Cloudflare:"#D95B18",Amazon:"#FF9900",Respan:"#7CB518",NaiveAI:"#D14DC4",
 "Aleph Alpha":"#00B377",Bilibili:"#E91E8C","Supersonic Labs":"#324FC7",
 "Ai2":"#D00000","Together AI":"#083D77","Kling AI":"#00F5D4",Tavus:"#FFC6FF",Apodex:"#8AC926",
 "Reflection AI":"#1FB6FF",TII:"#C8A800","AutoTrust AI Lab":"#A4133C","Kandinsky Lab":"#76E0B7",
-JetBrains:"#087CFA"};
+JetBrains:"#087CFA",Callstack:"#1446A0",LightOn:"#FBFF12"};
 const MODELS=[
+["clef-omni","Clef-omni","Cloudflare","2026-10-09",1],
+["qwen-image-2-1-turbo","Qwen-Image-2.1-Turbo","Alibaba","2026-10-09",1],
+["microsoft-decision-1","Microsoft-Decision-1","Microsoft AI","2026-10-09",0],
 ["mellum2-1","Mellum2.1","JetBrains","2026-10-08",1],
+["lightonocr-3","LightOnOCR-3 (0.8B, 1B & 4B)","LightOn","2026-10-08",1],
 ["claude-haiku-5-5","Claude Haiku 5.5","Anthropic","2026-10-07",0],
 ["open-d1","open d1 (d1-3B & d1-omni-600M)","Liquid AI","2026-10-07",1],
 ["nemotron-3-ultra-cc","Nemotron-3-Ultra-CC & Labs-Ultra-Math (IOI/IMO)","NVIDIA","2026-10-07",1],
@@ -109,6 +113,7 @@ const MODELS=[
 ["pplx-decider-v1-1-27b","pplx-decider-v1.1-27b","Perplexity","2026-10-06",1],
 ["kandinsky-6-0-video","Kandinsky 6.0 Video (Lite & Pro) & VSR","Kandinsky Lab","2026-10-06",1],
 ["falcon-emirati-7b","Falcon-Emirati-7B","TII","2026-10-06",0],
+["falcon-ocr-arabic","Falcon OCR Arabic","TII","2026-10-06",0],
 ["beam","Beam","Reflection AI","2026-10-05",0],
 ["amazon-nova-2-5-sonic","Amazon Nova 2.5 Sonic","Amazon","2026-10-05",0],
 ["rho-1","Rho-1","Reka","2026-10-05",0],
@@ -306,6 +311,7 @@ const MODELS=[
 ["grok-build-0-1","Grok Build 0.1","xAI","2026-05-29",0],
 ["claude-opus-4-8","Claude Opus 4.8","Anthropic","2026-05-28",0],
 ["paddleocr-vl-1-6","PaddleOCR-VL 1.6","Baidu","2026-05-28",1],
+["apex","Apex","Callstack","2026-05-27",0],
 ["qwen3-7-max","Qwen3.7 Max & Plus","Alibaba","2026-05-20",0],
 ["command-a-plus","Command A+","Cohere","2026-05-20",1],
 ["intern-s2-preview","Intern-S2-Preview","Shanghai AI Lab","2026-05-15",1],
@@ -431,6 +437,12 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"clef-omni":"https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
+"qwen-image-2-1-turbo":"https://github.com/QwenLM/Qwen-Image-2.1",
+"microsoft-decision-1":"https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742",
+"lightonocr-3":"https://huggingface.co/blog/lightonai/lightonocr-3",
+"falcon-ocr-arabic":"https://huggingface.co/blog/tiiuae/falcon-ocr-arabic",
+"apex":"https://www.callstack.com/blog/introducing-apex-a-fast-specialized-model-for-react-native",
 "mellum2-1":"https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/",
 "falcon-asr":"https://huggingface.co/blog/tiiuae/falcon-asr",
 "rho-1":"https://www.reka.ai/news/rho-1-collapsing-the-multimodal-stack",
