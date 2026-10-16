@@ -213,7 +213,9 @@ const REQUIRED_ENTRIES = [
     slug: "ling-3-1-flash",
     co: "Ant Group",
     date: "2026-09-30",
-    open: 0,
+    // announced API-only ("open-source soon"); weights published 2026-10-13 at
+    // https://huggingface.co/inclusionAI/Ling-3.1-flash, so the flag flipped to open
+    open: 1,
     ann: "https://x.com/AntLingAGI/status/2105335205741596911",
   },
   {
