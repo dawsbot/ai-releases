@@ -97,8 +97,12 @@ Cloudflare:"#D95B18",Amazon:"#FF9900",Respan:"#7CB518",NaiveAI:"#D14DC4",
 "Reflection AI":"#1FB6FF",TII:"#C8A800","AutoTrust AI Lab":"#A4133C","Kandinsky Lab":"#76E0B7",
 JetBrains:"#087CFA",Callstack:"#1446A0",LightOn:"#FBFF12",
 TwelveLabs:"#8FFF00","Sperid Labs":"#1E90FF",
-Subquadratic:"#B5179E","Fish Audio":"#006D77",Datalab:"#3A0CA3",Krea:"#F15BB5"};
+Subquadratic:"#B5179E","Fish Audio":"#006D77",Datalab:"#3A0CA3",Krea:"#F15BB5",
+Inception42:"#7209B7",OpenMOSS:"#0B6E4F",Elorian:"#9E2A2B"};
 const MODELS=[
+["moss-image","MOSS-Image (Base & SFT)","OpenMOSS","2026-10-16",1],
+["glimpse","Glimpse","Elorian","2026-10-16",0],
+["jais-3","Jais 3 (0.9B, 3.7B, 7B, 32B, 375B-A23B & MoVA-36B-A4B) & Jais Speech","Inception42","2026-10-15",1],
 ["gpt-live-1-1","GPT-Live-1.1","OpenAI","2026-10-15",0],
 ["muse-spark-open","Muse Spark Open","Meta","2026-10-15",1],
 ["timestral","Timestral (5M, 28M, 123M & 209M)","Mistral","2026-10-15",1],
@@ -135,7 +139,7 @@ const MODELS=[
 ["falcon-emirati-7b","Falcon-Emirati-7B","TII","2026-10-06",0],
 ["falcon-ocr-arabic","Falcon OCR Arabic","TII","2026-10-06",0],
 ["pegasus-1-6","Pegasus 1.6","TwelveLabs","2026-10-06",0],
-["beam","Beam","Reflection AI","2026-10-05",0],
+["beam","Beam","Reflection AI","2026-10-05",1],
 ["amazon-nova-2-5-sonic","Amazon Nova 2.5 Sonic","Amazon","2026-10-05",0],
 ["rho-1","Rho-1","Reka","2026-10-05",0],
 ["iris-3b","Iris-3B","Sperid Labs","2026-10-05",1],
@@ -322,6 +326,7 @@ const MODELS=[
 ["seedream-5-0-pro","Seedream 5.0 Pro","ByteDance","2026-07-08",0],
 ["hunyuanocr-1-5","HunyuanOCR-1.5","Tencent","2026-07-07",1],
 ["claude-sonnet-5","Claude Sonnet 5","Anthropic","2026-06-30",0],
+["grok-imagine-video-1-5","Grok Imagine Video 1.5","xAI","2026-06-16",0],
 ["glm-5-2","GLM-5.2","Z.AI","2026-06-13",1],
 ["claude-fable-5","Claude Fable 5 / Mythos 5","Anthropic","2026-06-09",0],
 ["north-mini-code","North Mini Code","Cohere","2026-06-09",1],
@@ -460,6 +465,10 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"moss-image":"https://github.com/OpenMOSS/MOSS-Image",
+"glimpse":"https://elorian.ai/blog/introducing-glimpse",
+"jais-3":"https://ifm.ai/blog/jais3/",
+"grok-imagine-video-1-5":"https://x.ai/news/grok-imagine-video-1-5",
 "gpt-live-1-1":"https://community.openai.com/t/gpt-live-1-1-is-rolling-out-with-new-voices-and-better-accents/1406704",
 "muse-spark-open":"https://research.meta.ai/blog/muse-spark-open",
 "timestral":"https://mistral.ai/news/timestral/",
