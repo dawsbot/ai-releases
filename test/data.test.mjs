@@ -226,6 +226,15 @@ const REQUIRED_ENTRIES = [
     ann: "https://www.hcompany.ai/newsroom/holo4",
   },
   {
+    // missed by the Oct 16 and Oct 17 sweeps despite appearing in the HF org-blog
+    // feed (climate emulator — no modality-based scope narrowing is allowed)
+    slug: "hiro-acev2",
+    co: "Ai2",
+    date: "2026-10-14",
+    open: 1,
+    ann: "https://huggingface.co/blog/allenai/hiro-acev2",
+  },
+  {
     slug: "span-01",
     co: "Respan",
     date: "2026-09-24",
