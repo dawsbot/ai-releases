@@ -20,6 +20,24 @@ const bySlug = new Map(MODELS.map((m) => [m[0], m]));
 // --- Regression: releases the Sep 2026 updater wrongly skipped ---------------
 // Each was verified against the provider's own page (first-party, exact date).
 const REQUIRED_ENTRIES = [
+  {slug: "rerank-5", co: "Cohere", date: "2026-10-21", open: 0, ann: "https://cohere.com/blog/rerank-5"},
+  // Verified catch-up and first-announcement date repairs, 2026-10-23.
+  {"slug": "kimi-k3-1-pro", "co": "Moonshot AI", "date": "2026-10-23", "open": 0, "ann": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"},
+  {"slug": "flint", "co": "Recursive", "date": "2026-10-21", "open": 1, "ann": "https://recursive.com/updates/introducing-recursive-flint"},
+  {"slug": "mammoth-1-elephant-1", "co": "Baseten", "date": "2026-10-21", "open": 1, "ann": "https://www.baseten.co/blog/the-best-decision-models-in-the-world-mammoth-1-and-elephant-1/"},
+  {"slug": "granite-speech-5-0-turbo-ctc-1021", "co": "IBM", "date": "2026-10-21", "open": 1, "ann": "https://huggingface.co/blog/ibm-granite/granite-speech-5"},
+  {"slug": "granite-speech-4-1-2b-plus-1021", "co": "IBM", "date": "2026-10-21", "open": 1, "ann": "https://huggingface.co/blog/ibm-granite/granite-speech-5"},
+  {"slug": "voxtral-3", "co": "Mistral", "date": "2026-10-20", "open": 0, "ann": "https://mistral.ai/news/voxtral-3/"},
+  {"slug": "spark-x2-6-4b", "co": "iFlytek", "date": "2026-10-20", "open": 1, "ann": "https://dev.to/sparkllm/spark-x26-4b-stronger-on-device-agents-coding-and-controllable-thinking-2fh"},
+  {"slug": "granite-speech-5-0-2b", "co": "IBM", "date": "2026-10-20", "open": 1, "ann": "https://huggingface.co/ibm-granite/granite-speech-5.0-2b"},
+  {"slug": "cosmos3-h-embodied-nano", "co": "NVIDIA", "date": "2026-10-20", "open": 1, "ann": "https://huggingface.co/nvidia/Cosmos3-H-Embodied-Nano"},
+  {"slug": "cosmos3-h-dreams", "co": "NVIDIA", "date": "2026-10-20", "open": 1, "ann": "https://huggingface.co/nvidia/Cosmos3-H-Dreams"},
+  {"slug": "phonon-31m-40m", "co": "Gradium", "date": "2026-10-20", "open": 1, "ann": "https://gradium.ai/blog/release-phonon-open-weight"},
+  {"slug": "eleven-realtime-v1", "co": "ElevenLabs", "date": "2026-10-19", "open": 0, "ann": "https://elevenlabs.io/docs/changelog"},
+  {"slug": "ultramarine-1-flash", "co": "Paper Instruments", "date": "2026-10-14", "open": 0, "ann": "https://www.paperinstruments.com/blog/ultramarine"},
+  {"slug": "nemotron-3-5-bolt-e4b", "co": "NVIDIA", "date": "2026-10-13", "open": 1, "ann": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/"},
+  {"slug": "nemotron-3-5-bolt", "co": "NVIDIA", "date": "2026-10-13", "open": 1, "ann": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/"},
+
   {
     slug: "kimi-k2-8-preview",
     co: "Moonshot AI",
