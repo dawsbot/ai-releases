@@ -100,9 +100,11 @@ TwelveLabs:"#8FFF00","Sperid Labs":"#1E90FF",
 Subquadratic:"#B5179E","Fish Audio":"#006D77",Datalab:"#3A0CA3",Krea:"#F15BB5",
 Inception42:"#7209B7",OpenMOSS:"#0B6E4F",Elorian:"#9E2A2B",Recursive:"#8B9DFF",Baseten:"#20A997",Gradium:"#D7A44B","Paper Instruments":"#A17CC1",
 Block:"#3E5C76",Canva:"#5E35B1","AI Singapore":"#8D0801",KRAFTON:"#B23A00",HeyGen:"#3A36A8","humans&":"#CBB994",MemTensor:"#D81E5B",Underdog:"#386641",
-"Nace.AI":"#BC6C25","H2O.ai":"#FFC300","vLLM-SR":"#2DC653",Giotto:"#028EC6",Particle:"#00CF00"};
+"Nace.AI":"#BC6C25","H2O.ai":"#FFC300","vLLM-SR":"#2DC653",Giotto:"#028EC6",Particle:"#00CF00",AssemblyAI:"#3923C7"};
 const MODELS=[
+["granite-switch-4-1-1","Granite Switch 4.1.1","IBM","2026-10-29",1],
 ["gemini-4-carbon","Gemini 4 Carbon","Google","2026-10-28",0],
+["assemblyai-tts-1","AssemblyAI-TTS-1","AssemblyAI","2026-10-28",0],
 ["particle-1","Particle-1","Particle","2026-10-28",0],
 ["nemotron-3-5-transcribe","Nemotron 3.5 Transcribe (30B-A4B)","NVIDIA","2026-10-28",1],
 ["minicpm-ocr-1-0","MiniCPM-OCR 1.0 & Jev","OpenBMB","2026-10-28",1],
@@ -110,6 +112,7 @@ const MODELS=[
 ["d1-2b","d1-2B & d1-omni-2B","Liquid AI","2026-10-27",1],
 ["genie-4","Genie 4","Google","2026-10-27",0],
 ["mai-image-2-7","MAI-Image-2.7","Microsoft AI","2026-10-27",0],
+["mai-cyber-1-1-flash","MAI-Cyber-1.1-Flash","Microsoft AI","2026-10-27",0],
 ["giotto-alto-solo","Giotto Alto & Solo","Giotto","2026-10-27",0],
 ["spark-x2-6-1-7b","Spark-X2.6-1.7B","iFlytek","2026-10-27",1],
 ["unlimited-ocr-works-2","Unlimited OCR Works 2","Baidu","2026-10-27",1],
@@ -189,7 +192,7 @@ const MODELS=[
 ["falcon-asr","Falcon ASR","TII","2026-10-07",0],
 ["h2o-lightning-4b","H2O-Lightning-4B","H2O.ai","2026-10-07",1],
 ["vela-2-0","Vela 2.0 (9B, 4B, 0.8B & 0.3B)","vLLM-SR","2026-10-06",1],
-["mistral-large-4","Mistral Large 4","Mistral","2026-10-06",0],
+["mistral-large-4","Mistral Large 4","Mistral","2026-10-06",1],
 ["embeddinggemma-2","EmbeddingGemma 2","Google","2026-10-06",1],
 ["nano-banana-2-1","Nano Banana 2.1","Google","2026-10-06",0],
 ["pplx-decider-v1-1-27b","pplx-decider-v1.1-27b","Perplexity","2026-10-06",1],
@@ -525,6 +528,9 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"granite-switch-4-1-1":"https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+"assemblyai-tts-1":"https://www.assemblyai.com/blog/text-to-speech-api",
+"mai-cyber-1-1-flash":"https://microsoft.ai/news/mai-cyber-1-1-flash/",
 "gemini-4-carbon":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
 "particle-1":"https://particle.ai/blog/introducing-particle-1",
 "nemotron-3-5-transcribe":"https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
