@@ -22,7 +22,9 @@ const bySlug = new Map(MODELS.map((m) => [m[0], m]));
 const REQUIRED_ENTRIES = [
   {slug: "rerank-5", co: "Cohere", date: "2026-10-21", open: 0, ann: "https://cohere.com/blog/rerank-5"},
   // Verified catch-up and first-announcement date repairs, 2026-10-23.
-  {"slug": "kimi-k3-1-pro", "co": "Moonshot AI", "date": "2026-10-23", "open": 0, "ann": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"},
+  // open flipped 0->1 on 2026-11-05: moonshotai/Kimi-K3.1-Pro public on Hugging Face
+  // (created 2026-11-02, ungated, 96 safetensors shards) — promised weights shipped.
+  {"slug": "kimi-k3-1-pro", "co": "Moonshot AI", "date": "2026-10-23", "open": 1, "ann": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"},
   {"slug": "flint", "co": "Recursive", "date": "2026-10-21", "open": 1, "ann": "https://recursive.com/updates/introducing-recursive-flint"},
   {"slug": "mammoth-1-elephant-1", "co": "Baseten", "date": "2026-10-21", "open": 1, "ann": "https://www.baseten.co/blog/the-best-decision-models-in-the-world-mammoth-1-and-elephant-1/"},
   {"slug": "granite-speech-5-0-turbo-ctc-1021", "co": "IBM", "date": "2026-10-21", "open": 1, "ann": "https://huggingface.co/blog/ibm-granite/granite-speech-5"},
