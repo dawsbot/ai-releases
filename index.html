@@ -104,9 +104,13 @@ Block:"#3E5C76",Canva:"#5E35B1","AI Singapore":"#8D0801",KRAFTON:"#B23A00",HeyGe
 "Nace.AI":"#BC6C25","H2O.ai":"#FFC300","vLLM-SR":"#2DC653",Giotto:"#028EC6",Particle:"#00CF00",
 Phonic:"#4D65FF",AGIBOT:"#6E619A",
 SenseTime:"#4B0082",Kyutai:"#31E981",Pipecat:"#AEF78E",
-"Abacus.AI":"#814EE8","Ricursive Intelligence":"#C1121F","Flower Labs":"#FF4400","Deep Principle":"#236D67",DiffuSpace:"#52B788"};
+"Abacus.AI":"#814EE8","Ricursive Intelligence":"#C1121F","Flower Labs":"#FF4400","Deep Principle":"#236D67",DiffuSpace:"#52B788",
+"Nous Research":"#C96F4A","Thinking Machines Lab":"#0155BF",Linum:"#6D28D9",Meituan:"#FFDE21"};
 const MODELS=[
+["arete-27b","Arete-27B","Nous Research","2026-11-06",1],
 ["metrictrail","MetricTrail","NVIDIA","2026-11-05",1],
+["inkling-2-small","Inkling 2 Small","Thinking Machines Lab","2026-11-05",0],
+["ernie-5-5-flash-base","ERNIE 5.5 Flash Base","Baidu","2026-11-05",1],
 ["gpt-6-cyber","GPT-6 Cyber","OpenAI","2026-11-05",0],
 ["gemini-omni-1-2-flash","Gemini Omni 1.2 Flash","Google","2026-11-05",0],
 ["plamo-3-translate","PLaMo 3 Translate (0.8B, 2B, 8B & 31B)","Preferred Networks","2026-11-05",1],
@@ -115,12 +119,14 @@ const MODELS=[
 ["gpt-image-2-6","GPT-Image-2.6 (Sunburst & Flare)","OpenAI","2026-11-04",0],
 ["ripple-65b-preview","Ripple-65B Preview","Ricursive Intelligence","2026-11-04",1],
 ["swe-2-flash","SWE-2 Flash","Cognition","2026-11-04",0],
+["p-jit","P-JiT","Linum","2026-11-04",1],
 ["endeavor-1-1","Endeavor 1.1","Flower Labs","2026-11-03",0],
 ["pplx-embed-v2-context","pplx-embed-v2-context (9B & 0.6B)","Perplexity","2026-11-03",1],
 ["internvideo2-clip-anomaly-detection","InternVideo2-CLIP-anomaly-detection","NVIDIA","2026-11-03",1],
 ["hydrogen-1-0","Hydrogen-1.0","Deep Principle","2026-11-02",1],
 ["smaug-decisions","Smaug-Decisions & Audio-Decisions-0.7B","Abacus.AI","2026-11-02",1],
 ["sensenova-6-8-flash","SenseNova 6.8 Flash","SenseTime","2026-11-02",0],
+["longcat-2-5","LongCat-2.5","Meituan","2026-11-01",0],
 ["gpt-6-rosalind","GPT-6 Rosalind","OpenAI","2026-10-30",0],
 ["ampersand-tutor","Ampersand Tutor","humans&","2026-10-30",0],
 ["sensenova-loop-9b-preview","SenseNova-Loop-9B-Preview","SenseTime","2026-10-30",1],
@@ -570,6 +576,11 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"arete-27b":"https://nousresearch.com/arete",
+"inkling-2-small":"https://thinkingmachines.ai/news/inkling-2-small/",
+"ernie-5-5-flash-base":"https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+"p-jit":"https://linum.ai/field-notes/pjit-21k/",
+"longcat-2-5":"https://longcat.ai/blog/longcat-2.5/",
 "gpt-6-cyber":"https://openai.com/index/introducing-gpt-6-cyber/",
 "gemini-omni-1-2-flash":"https://ai.google.dev/gemini-api/docs/changelog",
 "plamo-3-translate":"https://www.preferred.jp/en/blog/tech/plamo-3-translate-weight-release",
