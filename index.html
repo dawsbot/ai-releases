@@ -71,7 +71,7 @@ footer{color:var(--muted);font-size:13px;margin-top:56px;}
 <footer>Announcement dates verified September 2026 · closed unless marked open · ages recompute on each visit.</footer>
 </div>
 <script>
-const CO={"Preferred Networks":"#C8F560",
+const CO={"LG AI Research":"#E6007E","Kakao":"#FEE500","TokenRhythm":"#C018F0","Celeris":"#FF3D7F","Preferred Networks":"#C8F560",
 Anthropic:"#E08D6D",OpenAI:"#74C0A6",Google:"#6E9BF0",Meta:"#B48CE8",
 DeepSeek:"#5FC9E0",Alibaba:"#E86FA4",xAI:"#C9CDD6",Mistral:"#A6D65E",
 "Moonshot AI":"#8FB4FF","MiniMax":"#FF9DB0",Cohere:"#D4A276",Databricks:"#E4625F",
@@ -107,7 +107,16 @@ SenseTime:"#4B0082",Kyutai:"#31E981",Pipecat:"#AEF78E",
 "Abacus.AI":"#814EE8","Ricursive Intelligence":"#C1121F","Flower Labs":"#FF4400","Deep Principle":"#236D67",DiffuSpace:"#52B788",
 "Nous Research":"#C96F4A","Thinking Machines Lab":"#0155BF",Linum:"#6D28D9",Meituan:"#FFDE21"};
 const MODELS=[
+["claude-fable-5-2","Claude Fable 5.2 / Mythos 5.2","Anthropic","2026-11-09",0],
+["muse-ember","Muse Ember","Meta","2026-11-09",0],
+["k-exaone-2-5","K-EXAONE 2.5","LG AI Research","2026-11-09",0],
 ["arete-27b","Arete-27B","Nous Research","2026-11-06",1],
+["mirage","Mirage","Cactus Compute","2026-11-06",1],
+["kanana-2-v-decide-3b-2611","Kanana-2-v-decide-3b-2611","Kakao","2026-11-06",1],
+["neohorse-1-5-flash-preview","NeoHorse-1.5-Flash Preview","TokenRhythm","2026-11-06",0],
+["glide-family","GLiDE Family (0.4B–27B)","Fastino","2026-11-05",1],
+["celeris-1-1-decision","Celeris-1.1 Decision","Celeris","2026-11-05",0],
+["ling-3-2-flash","Ling-3.2-flash","Ant Group","2026-11-05",0],
 ["metrictrail","MetricTrail","NVIDIA","2026-11-05",1],
 ["inkling-2-small","Inkling 2 Small","Thinking Machines Lab","2026-11-05",0],
 ["ernie-5-5-flash-base","ERNIE 5.5 Flash Base","Baidu","2026-11-05",1],
@@ -269,7 +278,7 @@ const MODELS=[
 ["pplx-embed-v2-context-9b-preview","pplx-embed-v2-context-9b-preview","Perplexity","2026-09-30",1],
 ["ling-3-1-flash","Ling-3.1-flash","Ant Group","2026-09-30",1],
 ["jev-27b-vl","JEV-27B-VL","AutoTrust AI Lab","2026-09-30",1],
-["glide","GLiDE","Fastino","2026-09-30",0],
+["glide","GLiDE","Fastino","2026-09-30",1],
 ["gpt-6-1-sol","GPT-6.1 Sol","OpenAI","2026-09-29",0],
 ["d1","d1","Liquid AI","2026-09-29",0],
 ["claude-sonnet-5-5","Claude Sonnet 5.5","Anthropic","2026-09-28",0],
@@ -576,6 +585,15 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"claude-fable-5-2":"https://www.anthropic.com/claude-fable-and-mythos-5-2",
+"muse-ember":"https://research.meta.ai/blog/muse-ember",
+"k-exaone-2-5":"https://www.lgresearch.ai/news/view?seq=755",
+"mirage":"https://cactuscompute.com/blog/mirage",
+"kanana-2-v-decide-3b-2611":"https://tech.kakao.com/posts/846",
+"neohorse-1-5-flash-preview":"https://tokenrhythm.studio/docs/updates",
+"glide-family":"https://fastino.ai/blog/glide-decision-model-family",
+"celeris-1-1-decision":"https://celeris.ai/celeris-1-1-decision",
+"ling-3-2-flash":"https://developer.ant-ling.com/en/docs/getting-started/changelog/",
 "arete-27b":"https://nousresearch.com/arete",
 "inkling-2-small":"https://thinkingmachines.ai/news/inkling-2-small/",
 "ernie-5-5-flash-base":"https://ernie.baidu.com/release/ernie-5-5-flash-base/",
