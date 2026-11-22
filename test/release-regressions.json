@@ -1,0 +1,46 @@
+[
+  {
+    "row": [
+      "mai-image-2-7-flash",
+      "MAI Image 2.7 Flash",
+      "Microsoft AI",
+      "2026-11-17",
+      0
+    ],
+    "announcement": "https://microsoft.ai/news/introducing-mai-image-2-7/",
+    "evidence": "Microsoft's November 17 announcement introduces Flash separately from MAI Image 2.7, which was first announced October 27. Flash is a hosted public-preview image model."
+  },
+  {
+    "row": [
+      "olala-mini-7a1b",
+      "Olala mini 7A1B",
+      "OVHcloud",
+      "2026-11-17",
+      1
+    ],
+    "announcement": "https://corporate.ovhcloud.com/en/newsroom/news/ovh-olala-mini/",
+    "evidence": "OVH's November 17 press release announces Olala mini before the November 19 summit. llm.ovhai.com/olala-mini-v1-0/ links to OVHaiLLM's public Apache-2.0 weights, resolving the prior ownership gap."
+  },
+  {
+    "row": [
+      "scribe-v3-live-medical",
+      "Scribe v3 Live Medical",
+      "ElevenLabs",
+      "2026-11-17",
+      0
+    ],
+    "announcement": "https://elevenlabs.io/blog/scribe-v3-live-medical",
+    "evidence": "November 17 publisher announcement releases a named clinical speech fine-tune in ElevenAgents."
+  },
+  {
+    "row": [
+      "sfx-v3",
+      "SFX v3",
+      "ElevenLabs",
+      "2026-10-29",
+      0
+    ],
+    "announcement": "https://elevenlabs.io/blog/sound-effects-v3",
+    "evidence": "October 29 original announcement predates the November 2 developer post and changelog; October 30 is the modified date."
+  }
+]
