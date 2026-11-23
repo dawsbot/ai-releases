@@ -42,5 +42,60 @@
     ],
     "announcement": "https://elevenlabs.io/blog/sound-effects-v3",
     "evidence": "October 29 original announcement predates the November 2 developer post and changelog; October 30 is the modified date."
+  },
+  {
+    "row": [
+      "glm-5-4",
+      "GLM-5.4",
+      "Z.AI",
+      "2026-11-23",
+      0
+    ],
+    "announcement": "https://x.com/ZixuanLi_/status/2124719275864670681",
+    "evidence": "X first-party syndication and oEmbed confirm Nov23 04:18:45 UTC announcement; business affiliation badge identifies Z.ai. Hosted Coding Plan release, no public weights announced."
+  },
+  {
+    "row": [
+      "qwen-audio-3-1-live",
+      "Qwen-Audio-3.1-Live",
+      "Alibaba",
+      "2026-11-23",
+      0
+    ],
+    "announcement": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+    "evidence": "Nov23 dated Singapore and Beijing release entries introduce the named full-duplex voice model, distinct from September ASR/TTS/Realtime/Next family. Paid hosted model; date taken from release entries, not page modified timestamp."
+  },
+  {
+    "row": [
+      "sensenova-roborsi-27b",
+      "SenseNova-RoboRSI-27B",
+      "SenseTime",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://github.com/OpenSenseNova/SenseNova-RoboRSI",
+    "evidence": "Publisher repository Nov23 News announces the named model; HF card explicitly identifies it as a fine-tune of Preview with new training. Public Apache2 weights verified; ownership follows SenseTime corporate backlinks to OpenSenseNova and sensenova."
+  },
+  {
+    "row": [
+      "sensenova-loop-9b",
+      "SenseNova-Loop-9B",
+      "SenseTime",
+      "2026-11-17",
+      1
+    ],
+    "announcement": "https://www.sensetime.com/en/news/sensenova-loop-9b-release-20261118-1435",
+    "evidence": "Corporate announcement displays Nov17 and official repository independently dates release Nov17. Improved model checkpoint versus Preview, not just later hosting. Public Apache2 weights verified. URL Nov18 is not announcement date."
+  },
+  {
+    "row": [
+      "alpamayo-2-edge",
+      "Alpamayo 2 Edge",
+      "NVIDIA",
+      "2026-10-21",
+      1
+    ],
+    "announcement": "https://nvidianews.nvidia.com/news/european-mobility-leaders-build-safe-vehicles-and-robotaxi-fleets-on-nvidia-hyperion",
+    "evidence": "NVIDIA Oct21 announcement names Alpamayo 2 Edge. Nov10 weights release and Nov23 catalog coverage are later events. Current publisher-linked public HF weights use OpenMDW1.1."
   }
 ]
