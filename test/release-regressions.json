@@ -97,5 +97,115 @@
     ],
     "announcement": "https://nvidianews.nvidia.com/news/european-mobility-leaders-build-safe-vehicles-and-robotaxi-fleets-on-nvidia-hyperion",
     "evidence": "NVIDIA Oct21 announcement names Alpamayo 2 Edge. Nov10 weights release and Nov23 catalog coverage are later events. Current publisher-linked public HF weights use OpenMDW1.1."
+  },
+  {
+    "row": [
+      "sensenova-u1-6-8b-mot",
+      "SenseNova-U1.6-8B-MoT",
+      "SenseTime",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://www.sensetime.com/cn/news/sensenova-u1-6-open-source-20261124-1152",
+    "evidence": "Corporate Nov24 announcement and publisher-linked repository News independently announce U1.6; Apache2 public BF16 shards verified. U1.6 Lite is the API service version, not a separate checkpoint."
+  },
+  {
+    "row": [
+      "sensenova-u1-6-lora-4step-v1-0",
+      "SenseNova-U1.6-8B-MoT-LoRA-4step-v1.0",
+      "SenseTime",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://github.com/OpenSenseNova/SenseNova-U1",
+    "evidence": "Publisher repository Nov24 News explicitly releases 4-step and 8-step distilled variants. Exact names and public Apache2 adapter weights verified in linked HF card/API. ComfyUI conversions are not extra models."
+  },
+  {
+    "row": [
+      "sensenova-u1-6-lora-8step-v1-0",
+      "SenseNova-U1.6-8B-MoT-LoRA-8step-v1.0",
+      "SenseTime",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://github.com/OpenSenseNova/SenseNova-U1",
+    "evidence": "Publisher repository Nov24 News explicitly releases 4-step and 8-step distilled variants. Exact names and public Apache2 adapter weights verified in linked HF card/API."
+  },
+  {
+    "row": [
+      "kolibri-1-1",
+      "Kolibri 1.1",
+      "Aleph Alpha",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://aleph-alpha.com/en/blog/kolibri-1-1/",
+    "evidence": "Publisher blog dated 23/11/2026 announces improved model; official linked card gives release date November23 and Apache2 weights. November20 repository-registration date is not an announcement."
+  },
+  {
+    "row": [
+      "ive-4b",
+      "IVE-4B",
+      "Illuin Technology",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://huggingface.co/blog/QuentinJG/ive-release",
+    "evidence": "Dated author launch post November23. Verified Illuin HF organization hosts public Apache2 model shards; cards link back to this launch post and identify the author and Illuin as developer. Substantial Qwen fine-tune."
+  },
+  {
+    "row": [
+      "ivonnet-0-8b",
+      "Ivonnet-0.8B",
+      "Illuin Technology",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://huggingface.co/blog/QuentinJG/ive-release",
+    "evidence": "Same November23 publisher launch; official card identifies distillation from IVE-4B and links author blog. Public Apache2 model and readout safetensors verified."
+  },
+  {
+    "row": [
+      "phonic-1-1",
+      "Phonic-1.1",
+      "Phonic",
+      "2026-11-23",
+      0
+    ],
+    "announcement": "https://phonic.ai/blog/phonic-1-1",
+    "evidence": "Publisher Nov23 article introduces new speech-to-speech model and says available today through hosted signup/API. phonic.co redirects to phonic.ai; no public weights claimed."
+  },
+  {
+    "row": [
+      "sensenova-u1-5-tailsteer",
+      "SenseNova-U1.5-8B-MoT-TailSteer",
+      "SenseTime",
+      "2026-11-04",
+      1
+    ],
+    "announcement": "https://github.com/OpenSenseNova/SenseNova-U1",
+    "evidence": "Publisher News dates named full TailSteer checkpoint Nov4. Official HF card describes final training stage improving repeated image edits, not a rehost; public Apache2 shards verified."
+  },
+  {
+    "row": [
+      "neudecide",
+      "NeuDecide",
+      "Neuphonic",
+      "2026-10-08",
+      1
+    ],
+    "announcement": "https://www.neuphonic.com/blog/neudecide",
+    "evidence": "Publisher visible date 08/10/2026 and JSON-LD datePublished 2026-10-08 agree. New trained speech-to-tool model; blog links official HF/GitHub. Apache2 ONNX weights public with automatic access gate. November23 news coverage is not first announcement."
+  },
+  {
+    "row": [
+      "sensenova-u1-5-lora-8step-v2",
+      "SenseNova-U1.5-8B-MoT-LoRA-8step-V2",
+      "SenseTime",
+      "2026-09-24",
+      1
+    ],
+    "announcement": "https://github.com/OpenSenseNova/SenseNova-U1",
+    "evidence": "Publisher News explicitly dates improved 8-step V2 LoRA September24, independently indexed in older README. Official card identifies trained distilled adapter and public Apache2 safetensors; not unchanged-weight quantization."
   }
 ]
