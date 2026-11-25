@@ -71,7 +71,7 @@ footer{color:var(--muted);font-size:13px;margin-top:56px;}
 <footer>Announcement dates verified September 2026 · closed unless marked open · ages recompute on each visit.</footer>
 </div>
 <script>
-const CO={"Illuin Technology":"#6478D3","Neuphonic":"#53BDA5","Mind Lab":"#DDA0DD","RadixArk":"#D97757","higurashi":"#85C7A3","Institute of Foundation Models":"#5AA9E6","Shizuku AI":"#B39DDB","Metric AI Lab":"#E6B85C","NeuML":"#90BE6D","Hugging Face":"#FFD21E","Reson8":"#56CFE1",
+const CO={"Retro Diffusion":"#fb923c","Spellbrush / Midjourney":"#a78bfa","Illuin Technology":"#6478D3","Neuphonic":"#53BDA5","Mind Lab":"#DDA0DD","RadixArk":"#D97757","higurashi":"#85C7A3","Institute of Foundation Models":"#5AA9E6","Shizuku AI":"#B39DDB","Metric AI Lab":"#E6B85C","NeuML":"#90BE6D","Hugging Face":"#FFD21E","Reson8":"#56CFE1",
 Hark:"#F20CD4",Edge0:"#0CF23A","SpeakLeash":"#F5F0E6","LG AI Research":"#E6007E","Kakao":"#FEE500","TokenRhythm":"#C018F0","Celeris":"#FF3D7F","Preferred Networks":"#C8F560",
 Anthropic:"#E08D6D",OpenAI:"#74C0A6",Google:"#6E9BF0",Meta:"#B48CE8",
 DeepSeek:"#5FC9E0",Alibaba:"#E86FA4",xAI:"#C9CDD6",Mistral:"#A6D65E",
@@ -109,9 +109,15 @@ SenseTime:"#4B0082",Kyutai:"#31E981",Pipecat:"#AEF78E",
 "Nous Research":"#C96F4A","Thinking Machines Lab":"#0155BF",Linum:"#6D28D9",Meituan:"#FFDE21",
 Zyphra:"#E5484D",Tether:"#009393",OVHcloud:"#000E9C"};
 const MODELS=[
+["swe-2-1-cyber","SWE-2.1 Cyber","Cognition","2026-11-24",0],
+["swe-2-1","SWE-2.1","Cognition","2026-11-24",0],
+["gradium-tts-beta-202611","gradium-tts-beta-202611","Gradium","2026-11-24",0],
+["rd-flow-64","RD Flow 64","Retro Diffusion","2026-11-24",1],
+["niji-8","Niji 8","Spellbrush / Midjourney","2026-11-24",0],
 ["sensenova-u1-6-8b-mot","SenseNova-U1.6-8B-MoT","SenseTime","2026-11-24",1],
 ["sensenova-u1-6-lora-4step-v1-0","SenseNova-U1.6-8B-MoT-LoRA-4step-v1.0","SenseTime","2026-11-24",1],
 ["sensenova-u1-6-lora-8step-v1-0","SenseNova-U1.6-8B-MoT-LoRA-8step-v1.0","SenseTime","2026-11-24",1],
+["gpt-6-2-november-23","GPT-6.2 (November 23)","OpenAI","2026-11-23",0],
 ["glm-5-4","GLM-5.4","Z.AI","2026-11-23",0],
 ["qwen-audio-3-1-live","Qwen-Audio-3.1-Live","Alibaba","2026-11-23",0],
 ["sensenova-roborsi-27b","SenseNova-RoboRSI-27B","SenseTime","2026-11-23",1],
@@ -129,6 +135,8 @@ const MODELS=[
 ["ohan-tts-v0-1","OhanTTS-v0.1","Metric AI Lab","2026-11-20",1],
 ["qwen3-8-27b-harness-adapters","Qwen3.8-27B Harness Adapters (Pi, OpenCode, Hermes & Super)","Hugging Face","2026-11-20",1],
 ["atto","Atto (dense, sparse & ColBERT)","NeuML","2026-11-19",1],
+["clairic-flash","Clairic-flash","Cloudflare","2026-11-18",1],
+["clairic-2026-11-18","Clairic","Cloudflare","2026-11-18",1],
 ["gemini-4-neon","Gemini 4 Neon","Google","2026-11-18",0],
 ["daisyrose-27b","DaisyRose-27B","RadixArk","2026-11-18",1],
 ["gpt-6-2-astra","GPT-6.2 Astra","OpenAI","2026-11-17",0],
@@ -662,6 +670,14 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"clairic-flash":"https://blog.cloudflare.com/open-clairic/",
+"clairic-2026-11-18":"https://blog.cloudflare.com/open-clairic/",
+"gpt-6-2-november-23":"https://deploymentsafety.openai.com/gpt-6-2-chatgpt/",
+"swe-2-1-cyber":"https://cognition.com/blog/swe-2-1",
+"swe-2-1":"https://cognition.com/blog/swe-2-1",
+"gradium-tts-beta-202611":"https://docs.gradium.ai/guides/release-notes",
+"rd-flow-64":"https://retrodiffusion.ai/blog/rd-flow-64-technical-report",
+"niji-8":"https://nijijourney.com/blog/niji-8",
 "sensenova-u1-6-8b-mot":"https://www.sensetime.com/cn/news/sensenova-u1-6-open-source-20261124-1152",
 "sensenova-u1-6-lora-4step-v1-0":"https://github.com/OpenSenseNova/SenseNova-U1",
 "sensenova-u1-6-lora-8step-v1-0":"https://github.com/OpenSenseNova/SenseNova-U1",

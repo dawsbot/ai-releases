@@ -207,5 +207,93 @@
     ],
     "announcement": "https://github.com/OpenSenseNova/SenseNova-U1",
     "evidence": "Publisher News explicitly dates improved 8-step V2 LoRA September24, independently indexed in older README. Official card identifies trained distilled adapter and public Apache2 safetensors; not unchanged-weight quantization."
+  },
+  {
+    "row": [
+      "niji-8",
+      "Niji 8",
+      "Spellbrush / Midjourney",
+      "2026-11-24",
+      0
+    ],
+    "announcement": "https://nijijourney.com/blog/niji-8",
+    "evidence": "Publisher launch post dated Nov24 introduces Niji 8 and hosted access. Publisher help center identifies the Spellbrush and Midjourney collaboration. No public weights announced."
+  },
+  {
+    "row": [
+      "rd-flow-64",
+      "RD Flow 64",
+      "Retro Diffusion",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://retrodiffusion.ai/blog/rd-flow-64-technical-report",
+    "evidence": "Publisher technical report dated November24 announces a 271M image model trained from scratch. It links Retro-Diffusion/rd-flow-64; the ungated HF API lists rd-flow-64.safetensors and CC-BY-NC-4.0 weights."
+  },
+  {
+    "row": [
+      "gradium-tts-beta-202611",
+      "gradium-tts-beta-202611",
+      "Gradium",
+      "2026-11-24",
+      0
+    ],
+    "announcement": "https://docs.gradium.ai/guides/release-notes",
+    "evidence": "Dated 2026.11.24 publisher changelog explicitly introduces a new TTS beta, separate from both default and earlier beta aliases. Hosted API and Studio access."
+  },
+  {
+    "row": [
+      "swe-2-1",
+      "SWE-2.1",
+      "Cognition",
+      "2026-11-24",
+      0
+    ],
+    "announcement": "https://cognition.com/blog/swe-2-1",
+    "evidence": "Dated 2026.11.24 publisher announcement introduces the named Kimi K3 reinforcement-learning post-train. Hosted Devin release; no public weights announced."
+  },
+  {
+    "row": [
+      "swe-2-1-cyber",
+      "SWE-2.1 Cyber",
+      "Cognition",
+      "2026-11-24",
+      0
+    ],
+    "announcement": "https://cognition.com/blog/swe-2-1",
+    "evidence": "Same November24 publisher announcement explicitly rolls out the named cybersecurity model version to Devin Security with different safeguards. First-party named version; not third-party refusal-stripped rehosting. No public weights announced."
+  },
+  {
+    "row": [
+      "gpt-6-2-november-23",
+      "GPT-6.2 (November 23)",
+      "OpenAI",
+      "2026-11-23",
+      0
+    ],
+    "announcement": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt/",
+    "evidence": "System card published November23 explicitly names the updated chat model GPT-6.2 (November 23), distinguishing it from Astra and Sol. Chat release notes confirm Nov23 rollout; Nov24 chat-latest API update is later availability. Hosted model."
+  },
+  {
+    "row": [
+      "clairic-2026-11-18",
+      "Clairic",
+      "Cloudflare",
+      "2026-11-18",
+      1
+    ],
+    "announcement": "https://blog.cloudflare.com/open-clairic/",
+    "evidence": "November18 announcement explicitly redesigns architecture and trains new extraction heads behind unchanged clairic alias, now 27B. Distinct from October19 preview; preserve old slug and row. Publisher-linked Cloudflare/clairic has public Apache2 safetensors."
+  },
+  {
+    "row": [
+      "clairic-flash",
+      "Clairic-flash",
+      "Cloudflare",
+      "2026-11-18",
+      1
+    ],
+    "announcement": "https://blog.cloudflare.com/open-clairic/",
+    "evidence": "November18 announcement introduces new 9B Clairic-flash alongside redesigned Clairic, with separate improved evals versus preview. Publisher-linked Cloudflare/clairic-flash has public Apache2 safetensors."
   }
 ]
