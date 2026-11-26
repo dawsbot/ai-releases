@@ -295,5 +295,115 @@
     ],
     "announcement": "https://blog.cloudflare.com/open-clairic/",
     "evidence": "November18 announcement introduces new 9B Clairic-flash alongside redesigned Clairic, with separate improved evals versus preview. Publisher-linked Cloudflare/clairic-flash has public Apache2 safetensors."
+  },
+  {
+    "row": [
+      "mellum2-1-instruct",
+      "Mellum2.1 Instruct",
+      "JetBrains",
+      "2026-11-25",
+      1
+    ],
+    "announcement": "https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/",
+    "evidence": "Distinct Instruct post-train, separate from October Thinking. Publisher time element dates November25 (not updated metadata); Apache2 weights linked from publisher."
+  },
+  {
+    "row": [
+      "nio-worldmodel-3-0",
+      "NIO WorldModel 3.0",
+      "NIO",
+      "2026-11-25",
+      0
+    ],
+    "announcement": "https://www.nio.com/news/20261125001",
+    "evidence": "Public named world/decision model announcement at NIO IN; December vehicle rollout is later availability. Proprietary vehicle model; no public weights claimed."
+  },
+  {
+    "row": [
+      "magi-2",
+      "MAGI-2",
+      "Sand.ai",
+      "2026-11-24",
+      0
+    ],
+    "announcement": "https://sand.ai/blog/magi-2",
+    "evidence": "New 480B model with expanded training versus August114B preview, not GA of identical weights. Open weights promised for future, not yet released."
+  },
+  {
+    "row": [
+      "solar-mini-4-5-preview",
+      "Solar Mini 4.5 Preview",
+      "Upstage",
+      "2026-11-23",
+      0
+    ],
+    "announcement": "https://console.upstage.ai/docs/resources/changelog",
+    "evidence": "Original dated Console announcement and model version history agree November23; November24 newsletter and later OpenRouter availability are not date proof. Hosted preview."
+  },
+  {
+    "row": [
+      "bison-1",
+      "bison-1",
+      "Baseten",
+      "2026-11-20",
+      1
+    ],
+    "announcement": "https://www.baseten.co/blog/meet-bison-1-and-groundhog-1/",
+    "evidence": "Named Gemma4 post-train decision model. Publisher announcement/changelog agree November20 and link baselabs public weights, verifying ownership."
+  },
+  {
+    "row": [
+      "groundhog-1",
+      "groundhog-1",
+      "Baseten",
+      "2026-11-20",
+      1
+    ],
+    "announcement": "https://www.baseten.co/blog/meet-bison-1-and-groundhog-1/",
+    "evidence": "Named Gemma4 post-train decision model. Publisher announcement/changelog agree November20 and link baselabs public weights, verifying ownership."
+  },
+  {
+    "row": [
+      "solar-decide-flash",
+      "Solar Decide Flash",
+      "Upstage",
+      "2026-10-08",
+      0
+    ],
+    "announcement": "https://console.upstage.ai/docs/resources/changelog",
+    "evidence": "Missed named tuned low-latency decision-model beta. Model page confirms October8; hosted via System One."
+  },
+  {
+    "row": [
+      "document-parse-260930",
+      "document-parse-260930",
+      "Upstage",
+      "2026-09-30",
+      0
+    ],
+    "announcement": "https://console.upstage.ai/docs/resources/changelog",
+    "evidence": "Missed named VLM upgrade behind unchanged alias; replaces prior multi-stage pipeline with end-to-end VLM. Dated changelog and model card agree; paid API, no public weights."
+  },
+  {
+    "row": [
+      "smaug-ai-text-detector-35b-a3b",
+      "Smaug-AI-Text-Detector-35B-A3B",
+      "Abacus.AI",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://blog.abacus.ai/blog/2026/11/24/smaug-ai-text-detector",
+    "evidence": "Publisher November24 announcement explicitly releases named trained detector, with Apache2 public weights linked directly; no repository timestamp used as announcement date."
+  },
+  {
+    "row": [
+      "smaug-ai-text-detector-e4b",
+      "Smaug-AI-Text-Detector-E4B",
+      "Abacus.AI",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://blog.abacus.ai/blog/2026/11/24/smaug-ai-text-detector",
+    "evidence": "Publisher November24 announcement explicitly releases named trained detector, with Apache2 public weights linked directly; no repository timestamp used as announcement date."
   }
 ]
