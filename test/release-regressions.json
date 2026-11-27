@@ -405,5 +405,148 @@
     ],
     "announcement": "https://blog.abacus.ai/blog/2026/11/24/smaug-ai-text-detector",
     "evidence": "Publisher November24 announcement explicitly releases named trained detector, with Apache2 public weights linked directly; no repository timestamp used as announcement date."
+  },
+  {
+    "row": [
+      "amazon-transcribe-turbo",
+      "Amazon Transcribe Turbo",
+      "Amazon",
+      "2026-11-25",
+      0
+    ],
+    "announcement": "https://aws.amazon.com/about-aws/whats-new/2026/11/transcribe-turbo-preview/",
+    "evidence": "Named next-generation hosted speech model; unchanged API and preview status do not exclude it."
+  },
+  {
+    "row": [
+      "sakana-namazu-small",
+      "Sakana Namazu Small",
+      "Sakana AI",
+      "2026-11-25",
+      0
+    ],
+    "announcement": "https://sakana.ai/namazu-small/",
+    "evidence": "Named continued-pretrained and post-trained model; announcement precedes planned private on-premises offering. No public weights released."
+  },
+  {
+    "row": [
+      "soma-1x-lite",
+      "Soma-1X Lite",
+      "Amini",
+      "2026-11-25",
+      1
+    ],
+    "announcement": "https://www.amini.ai/blog-post/amini-releases-soma-an-open-ai-model-to-take-nations-from-analogue-to-ai-ready",
+    "evidence": "New provider; explicit dated public release and downloadable publisher-linked weights."
+  },
+  {
+    "row": [
+      "ocria-nano-1",
+      "OCRia-nano-1",
+      "LlamaIndex",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://www.llamaindex.ai/blog/introducing-ocria-nano-1",
+    "evidence": "Named trained document-model suite, not merely the LiteParse parser product."
+  },
+  {
+    "row": [
+      "strands-decider-v2-e2b",
+      "Strands Decider v2 E2B",
+      "Amazon",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+    "evidence": "Distinct named trained Gemma4 decision-model tier; 17.5 million training examples and new architecture."
+  },
+  {
+    "row": [
+      "strands-decider-v2-e4b",
+      "Strands Decider v2 E4B",
+      "Amazon",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+    "evidence": "Distinct named trained Gemma4 decision-model tier; 17.5 million training examples and new architecture."
+  },
+  {
+    "row": [
+      "strands-decider-v2-12b",
+      "Strands Decider v2 12B",
+      "Amazon",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+    "evidence": "Distinct named trained Gemma4 decision-model tier; 17.5 million training examples and new architecture."
+  },
+  {
+    "row": [
+      "strands-decider-v2-26b-a4b",
+      "Strands Decider v2 26B-A4B",
+      "Amazon",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+    "evidence": "Distinct named trained Gemma4 decision-model tier; 17.5 million training examples and new architecture."
+  },
+  {
+    "row": [
+      "strands-decider-v2-31b",
+      "Strands Decider v2 31B",
+      "Amazon",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+    "evidence": "Distinct named trained Gemma4 decision-model tier; 17.5 million training examples and new architecture."
+  },
+  {
+    "row": [
+      "sarvam-105b-1711",
+      "Sarvam-105B-1711",
+      "Sarvam AI",
+      "2026-11-22",
+      1
+    ],
+    "announcement": "https://www.sarvam.ai/blogs/sarvam-105b-1711",
+    "evidence": "Named newly trained checkpoint; same parent model does not exclude post-training release."
+  },
+  {
+    "row": [
+      "lingsante-3-1-flash",
+      "LingSante-3.1-flash",
+      "Ant Group",
+      "2026-11-22",
+      1
+    ],
+    "announcement": "https://developer.ant-ling.com/en/blogs/lingsante-3.1-flash",
+    "evidence": "Original dated developer announcement precedes November23 corporate press release; named medical post-training release."
+  },
+  {
+    "row": [
+      "lingsante-3-1-air-vl",
+      "LingSante-3.1-air-VL",
+      "Ant Group",
+      "2026-11-22",
+      1
+    ],
+    "announcement": "https://developer.ant-ling.com/en/blogs/lingsante-3.1-air-vl",
+    "evidence": "Original dated developer announcement precedes November23 corporate press release; named medical post-training release."
+  },
+  {
+    "row": [
+      "lingsante-pulse",
+      "LingSante-Pulse",
+      "Ant Group",
+      "2026-11-20",
+      1
+    ],
+    "announcement": "https://developer.ant-ling.com/en/blogs/lingsante-pulse/",
+    "evidence": "Original research announcement predates corporate/social coverage; physiological signal foundation model with publisher-linked public weights."
   }
 ]

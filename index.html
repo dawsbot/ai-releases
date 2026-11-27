@@ -72,6 +72,7 @@ footer{color:var(--muted);font-size:13px;margin-top:56px;}
 </div>
 <script>
 const CO={
+Amini:"#418C6F",LlamaIndex:"#A855F7",
 NIO:"#00A99D","Sand.ai":"#C48757","Retro Diffusion":"#fb923c","Spellbrush / Midjourney":"#a78bfa","Illuin Technology":"#6478D3","Neuphonic":"#53BDA5","Mind Lab":"#DDA0DD","RadixArk":"#D97757","higurashi":"#85C7A3","Institute of Foundation Models":"#5AA9E6","Shizuku AI":"#B39DDB","Metric AI Lab":"#E6B85C","NeuML":"#90BE6D","Hugging Face":"#FFD21E","Reson8":"#56CFE1",
 Hark:"#F20CD4",Edge0:"#0CF23A","SpeakLeash":"#F5F0E6","LG AI Research":"#E6007E","Kakao":"#FEE500","TokenRhythm":"#C018F0","Celeris":"#FF3D7F","Preferred Networks":"#C8F560",
 Anthropic:"#E08D6D",OpenAI:"#74C0A6",Google:"#6E9BF0",Meta:"#B48CE8",
@@ -112,6 +113,9 @@ Zyphra:"#E5484D",Tether:"#009393",OVHcloud:"#000E9C"};
 const MODELS=[
 ["mellum2-1-instruct","Mellum2.1 Instruct","JetBrains","2026-11-25",1],
 ["nio-worldmodel-3-0","NIO WorldModel 3.0","NIO","2026-11-25",0],
+["amazon-transcribe-turbo","Amazon Transcribe Turbo","Amazon","2026-11-25",0],
+["sakana-namazu-small","Sakana Namazu Small","Sakana AI","2026-11-25",0],
+["soma-1x-lite","Soma-1X Lite","Amini","2026-11-25",1],
 ["swe-2-1-cyber","SWE-2.1 Cyber","Cognition","2026-11-24",0],
 ["swe-2-1","SWE-2.1","Cognition","2026-11-24",0],
 ["gradium-tts-beta-202611","gradium-tts-beta-202611","Gradium","2026-11-24",0],
@@ -132,6 +136,15 @@ const MODELS=[
 ["ivonnet-0-8b","Ivonnet-0.8B","Illuin Technology","2026-11-23",1],
 ["phonic-1-1","Phonic-1.1","Phonic","2026-11-23",0],
 ["solar-mini-4-5-preview","Solar Mini 4.5 Preview","Upstage","2026-11-23",0],
+["ocria-nano-1","OCRia-nano-1","LlamaIndex","2026-11-23",1],
+["strands-decider-v2-e2b","Strands Decider v2 E2B","Amazon","2026-11-23",1],
+["strands-decider-v2-e4b","Strands Decider v2 E4B","Amazon","2026-11-23",1],
+["strands-decider-v2-12b","Strands Decider v2 12B","Amazon","2026-11-23",1],
+["strands-decider-v2-26b-a4b","Strands Decider v2 26B-A4B","Amazon","2026-11-23",1],
+["strands-decider-v2-31b","Strands Decider v2 31B","Amazon","2026-11-23",1],
+["sarvam-105b-1711","Sarvam-105B-1711","Sarvam AI","2026-11-22",1],
+["lingsante-3-1-flash","LingSante-3.1-flash","Ant Group","2026-11-22",1],
+["lingsante-3-1-air-vl","LingSante-3.1-air-VL","Ant Group","2026-11-22",1],
 ["inkling-2-mini","Inkling 2 Mini","Thinking Machines Lab","2026-11-20",1],
 ["tml-d24-varloop-research","TML-d24-varloop-research","Thinking Machines Lab","2026-11-20",1],
 ["ayb-0-5-0-8b","Ayb-0.5-0.8B","Metric AI Lab","2026-11-20",1],
@@ -143,6 +156,7 @@ const MODELS=[
 ["qwen3-8-27b-harness-adapters","Qwen3.8-27B Harness Adapters (Pi, OpenCode, Hermes & Super)","Hugging Face","2026-11-20",1],
 ["bison-1","bison-1","Baseten","2026-11-20",1],
 ["groundhog-1","groundhog-1","Baseten","2026-11-20",1],
+["lingsante-pulse","LingSante-Pulse","Ant Group","2026-11-20",1],
 ["atto","Atto (dense, sparse & ColBERT)","NeuML","2026-11-19",1],
 ["clairic-flash","Clairic-flash","Cloudflare","2026-11-18",1],
 ["clairic-2026-11-18","Clairic","Cloudflare","2026-11-18",1],
@@ -681,6 +695,20 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"amazon-transcribe-turbo":"https://aws.amazon.com/about-aws/whats-new/2026/11/transcribe-turbo-preview/",
+"sakana-namazu-small":"https://sakana.ai/namazu-small/",
+"soma-1x-lite":"https://www.amini.ai/blog-post/amini-releases-soma-an-open-ai-model-to-take-nations-from-analogue-to-ai-ready",
+"ocria-nano-1":"https://www.llamaindex.ai/blog/introducing-ocria-nano-1",
+"strands-decider-v2-e2b":"https://strandsagents.com/blog/introducing-strands-decider-v2/",
+"strands-decider-v2-e4b":"https://strandsagents.com/blog/introducing-strands-decider-v2/",
+"strands-decider-v2-12b":"https://strandsagents.com/blog/introducing-strands-decider-v2/",
+"strands-decider-v2-26b-a4b":"https://strandsagents.com/blog/introducing-strands-decider-v2/",
+"strands-decider-v2-31b":"https://strandsagents.com/blog/introducing-strands-decider-v2/",
+"sarvam-105b-1711":"https://www.sarvam.ai/blogs/sarvam-105b-1711",
+"lingsante-3-1-flash":"https://developer.ant-ling.com/en/blogs/lingsante-3.1-flash",
+"lingsante-3-1-air-vl":"https://developer.ant-ling.com/en/blogs/lingsante-3.1-air-vl",
+"lingsante-pulse":"https://developer.ant-ling.com/en/blogs/lingsante-pulse/",
+
 "smaug-ai-text-detector-e4b":"https://blog.abacus.ai/blog/2026/11/24/smaug-ai-text-detector",
 "smaug-ai-text-detector-35b-a3b":"https://blog.abacus.ai/blog/2026/11/24/smaug-ai-text-detector",
 "mellum2-1-instruct":"https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/",
