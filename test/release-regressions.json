@@ -548,5 +548,170 @@
     ],
     "announcement": "https://developer.ant-ling.com/en/blogs/lingsante-pulse/",
     "evidence": "Original research announcement predates corporate/social coverage; physiological signal foundation model with publisher-linked public weights."
+  },
+  {
+    "row": [
+      "d1-3-ultra",
+      "d1.3-ultra",
+      "Liquid AI",
+      "2026-11-27",
+      0
+    ],
+    "announcement": "https://x.com/liquidai/status/2126374995399975380",
+    "evidence": "Named recursively improved hosted decision model. X oEmbed gives original announcement date; official site links liquidai account. LinkedIn confirms console offering, no public weights."
+  },
+  {
+    "row": [
+      "foxbrain-v2-1",
+      "FoxBrain v2.1",
+      "Hon Hai Research Institute",
+      "2026-11-27",
+      0
+    ],
+    "announcement": "https://www.foxconn.com/en-us/press-center/press-releases/latest-news/2164",
+    "evidence": "New provider, named proprietary enterprise language model. Dated company announcement; on-prem deployment does not imply downloadable open weights."
+  },
+  {
+    "row": [
+      "lingbot-navi",
+      "LingBot-Navi",
+      "Ant Group",
+      "2026-11-26",
+      1
+    ],
+    "announcement": "https://github.com/Robbyant/lingbot-navi",
+    "evidence": "Named trained spatial-memory multimodal/navigation model. Repository explicitly dates first public release November26; November27 press syndication is later."
+  },
+  {
+    "row": [
+      "hy4-flash-dfly2-b6",
+      "Hy4-flash-DFly2-B6",
+      "Tencent",
+      "2026-11-26",
+      1
+    ],
+    "announcement": "https://github.com/Tencent/AngelSpec",
+    "evidence": "Named newly trained MoE draft checkpoint, not a quantization or unchanged-weight host. November26 news explicitly announces new MoE drafters; earlier DFly2 framework/base drafter is separate."
+  },
+  {
+    "row": [
+      "ds-v4-1-flash-dfly2-b6",
+      "DS-V4.1-Flash-DFly2-B6",
+      "Tencent",
+      "2026-11-26",
+      1
+    ],
+    "announcement": "https://github.com/Tencent/AngelSpec",
+    "evidence": "Named newly trained MoE draft checkpoint, not a quantization or unchanged-weight host. November26 news explicitly announces new MoE drafters; earlier DFly2 framework/base drafter is separate."
+  },
+  {
+    "row": [
+      "glm-5-3-flash-dfly2-b6",
+      "GLM-5.3-Flash-DFly2-B6",
+      "Tencent",
+      "2026-11-26",
+      1
+    ],
+    "announcement": "https://github.com/Tencent/AngelSpec",
+    "evidence": "Named newly trained MoE draft checkpoint, not a quantization or unchanged-weight host. November26 news explicitly announces new MoE drafters; earlier DFly2 framework/base drafter is separate."
+  },
+  {
+    "row": [
+      "hy-mt3-1-8b",
+      "Hy-MT3-1.8B",
+      "Tencent",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://github.com/Tencent-Hunyuan/Hy-MT3",
+    "evidence": "Named trained translation model tier. Repository news explicitly dates release November24, preceding November25 cloud availability."
+  },
+  {
+    "row": [
+      "hy-mt3-7b",
+      "Hy-MT3-7B",
+      "Tencent",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://github.com/Tencent-Hunyuan/Hy-MT3",
+    "evidence": "Named trained translation model tier. Repository news explicitly dates release November24, preceding November25 cloud availability."
+  },
+  {
+    "row": [
+      "hy-mt3-30b-a3b",
+      "Hy-MT3-30B-A3B",
+      "Tencent",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://github.com/Tencent-Hunyuan/Hy-MT3",
+    "evidence": "Named trained translation model tier. Repository news explicitly dates release November24, preceding November25 cloud availability."
+  },
+  {
+    "row": [
+      "ming-image-0-2-design",
+      "Ming-Image-0.2-Design",
+      "Ant Group",
+      "2026-11-26",
+      1
+    ],
+    "announcement": "https://x.com/AntLingAGI/status/2125916926048358827",
+    "evidence": "Named image model publicly announced together on November26. Design weights public; Layer announced with future weights and therefore closed today. November25 leaderboard as-of/repository creation is not announcement proof."
+  },
+  {
+    "row": [
+      "ming-image-0-2-design-layer",
+      "Ming-Image-0.2-Design-Layer",
+      "Ant Group",
+      "2026-11-26",
+      0
+    ],
+    "announcement": "https://x.com/AntLingAGI/status/2125916926048358827",
+    "evidence": "Named image model publicly announced together on November26. Design weights public; Layer announced with future weights and therefore closed today. November25 leaderboard as-of/repository creation is not announcement proof."
+  },
+  {
+    "row": [
+      "qwen-sea-lion-ocr-4b",
+      "Qwen-SEA-LION-OCR-4B",
+      "AI Singapore",
+      "2026-11-27",
+      1
+    ],
+    "announcement": "https://sea-lion.ai/blog/introducing-qwen-sea-lion-ocr-4b/",
+    "evidence": "Named vision-language fine-tune, explicitly trained and merged adapters. Publisher original date November27; research-use weights count as open weights."
+  },
+  {
+    "row": [
+      "indra-ocr-1-2",
+      "Indra OCR 1.2",
+      "Datalab",
+      "2026-11-24",
+      1
+    ],
+    "announcement": "https://www.datalab.to/blog/indra-ocr-1-2",
+    "evidence": "Named model-suite upgrade with new math and table structure models; publisher explicitly dates release November24. Downloadable weights with use restrictions still count as open weights."
+  },
+  {
+    "row": [
+      "robotracker",
+      "RoboTracker",
+      "Ai2",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://allenai.org/blog/robotrack",
+    "evidence": "Named point-tracking fine-tune. Original publisher announcement and GitHub news agree November23; November18 weight/repo timestamp is not announcement. Public downloadable checkpoint."
+  },
+  {
+    "row": [
+      "robotracker-warp",
+      "RoboTracker-Warp",
+      "Ai2",
+      "2026-11-23",
+      1
+    ],
+    "announcement": "https://allenai.org/blog/robotrack",
+    "evidence": "Named point-tracking fine-tune. Original publisher announcement and GitHub news agree November23; November18 weight/repo timestamp is not announcement. Public downloadable checkpoint."
   }
 ]

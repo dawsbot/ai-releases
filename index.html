@@ -72,6 +72,7 @@ footer{color:var(--muted);font-size:13px;margin-top:56px;}
 </div>
 <script>
 const CO={
+"Hon Hai Research Institute":"#C65D45",
 Amini:"#418C6F",LlamaIndex:"#A855F7",
 NIO:"#00A99D","Sand.ai":"#C48757","Retro Diffusion":"#fb923c","Spellbrush / Midjourney":"#a78bfa","Illuin Technology":"#6478D3","Neuphonic":"#53BDA5","Mind Lab":"#DDA0DD","RadixArk":"#D97757","higurashi":"#85C7A3","Institute of Foundation Models":"#5AA9E6","Shizuku AI":"#B39DDB","Metric AI Lab":"#E6B85C","NeuML":"#90BE6D","Hugging Face":"#FFD21E","Reson8":"#56CFE1",
 Hark:"#F20CD4",Edge0:"#0CF23A","SpeakLeash":"#F5F0E6","LG AI Research":"#E6007E","Kakao":"#FEE500","TokenRhythm":"#C018F0","Celeris":"#FF3D7F","Preferred Networks":"#C8F560",
@@ -111,6 +112,15 @@ SenseTime:"#4B0082",Kyutai:"#31E981",Pipecat:"#AEF78E",
 "Nous Research":"#C96F4A","Thinking Machines Lab":"#0155BF",Linum:"#6D28D9",Meituan:"#FFDE21",
 Zyphra:"#E5484D",Tether:"#009393",OVHcloud:"#000E9C"};
 const MODELS=[
+["d1-3-ultra","d1.3-ultra","Liquid AI","2026-11-27",0],
+["foxbrain-v2-1","FoxBrain v2.1","Hon Hai Research Institute","2026-11-27",0],
+["qwen-sea-lion-ocr-4b","Qwen-SEA-LION-OCR-4B","AI Singapore","2026-11-27",1],
+["lingbot-navi","LingBot-Navi","Ant Group","2026-11-26",1],
+["hy4-flash-dfly2-b6","Hy4-flash-DFly2-B6","Tencent","2026-11-26",1],
+["ds-v4-1-flash-dfly2-b6","DS-V4.1-Flash-DFly2-B6","Tencent","2026-11-26",1],
+["glm-5-3-flash-dfly2-b6","GLM-5.3-Flash-DFly2-B6","Tencent","2026-11-26",1],
+["ming-image-0-2-design","Ming-Image-0.2-Design","Ant Group","2026-11-26",1],
+["ming-image-0-2-design-layer","Ming-Image-0.2-Design-Layer","Ant Group","2026-11-26",0],
 ["mellum2-1-instruct","Mellum2.1 Instruct","JetBrains","2026-11-25",1],
 ["nio-worldmodel-3-0","NIO WorldModel 3.0","NIO","2026-11-25",0],
 ["amazon-transcribe-turbo","Amazon Transcribe Turbo","Amazon","2026-11-25",0],
@@ -127,6 +137,10 @@ const MODELS=[
 ["magi-2","MAGI-2","Sand.ai","2026-11-24",0],
 ["smaug-ai-text-detector-35b-a3b","Smaug-AI-Text-Detector-35B-A3B","Abacus.AI","2026-11-24",1],
 ["smaug-ai-text-detector-e4b","Smaug-AI-Text-Detector-E4B","Abacus.AI","2026-11-24",1],
+["hy-mt3-1-8b","Hy-MT3-1.8B","Tencent","2026-11-24",1],
+["hy-mt3-7b","Hy-MT3-7B","Tencent","2026-11-24",1],
+["hy-mt3-30b-a3b","Hy-MT3-30B-A3B","Tencent","2026-11-24",1],
+["indra-ocr-1-2","Indra OCR 1.2","Datalab","2026-11-24",1],
 ["gpt-6-2-november-23","GPT-6.2 (November 23)","OpenAI","2026-11-23",0],
 ["glm-5-4","GLM-5.4","Z.AI","2026-11-23",0],
 ["qwen-audio-3-1-live","Qwen-Audio-3.1-Live","Alibaba","2026-11-23",0],
@@ -142,6 +156,8 @@ const MODELS=[
 ["strands-decider-v2-12b","Strands Decider v2 12B","Amazon","2026-11-23",1],
 ["strands-decider-v2-26b-a4b","Strands Decider v2 26B-A4B","Amazon","2026-11-23",1],
 ["strands-decider-v2-31b","Strands Decider v2 31B","Amazon","2026-11-23",1],
+["robotracker","RoboTracker","Ai2","2026-11-23",1],
+["robotracker-warp","RoboTracker-Warp","Ai2","2026-11-23",1],
 ["sarvam-105b-1711","Sarvam-105B-1711","Sarvam AI","2026-11-22",1],
 ["lingsante-3-1-flash","LingSante-3.1-flash","Ant Group","2026-11-22",1],
 ["lingsante-3-1-air-vl","LingSante-3.1-air-VL","Ant Group","2026-11-22",1],
@@ -695,6 +711,24 @@ const MODELS=[
 ["gpt-1","GPT-1","OpenAI","2018-06-11",1],
 ];
 const ANN={
+"qwen-sea-lion-ocr-4b":"https://sea-lion.ai/blog/introducing-qwen-sea-lion-ocr-4b/",
+"indra-ocr-1-2":"https://www.datalab.to/blog/indra-ocr-1-2",
+"robotracker":"https://allenai.org/blog/robotrack",
+"robotracker-warp":"https://allenai.org/blog/robotrack",
+
+"ming-image-0-2-design":"https://x.com/AntLingAGI/status/2125916926048358827",
+"ming-image-0-2-design-layer":"https://x.com/AntLingAGI/status/2125916926048358827",
+
+"d1-3-ultra":"https://x.com/liquidai/status/2126374995399975380",
+"foxbrain-v2-1":"https://www.foxconn.com/en-us/press-center/press-releases/latest-news/2164",
+"lingbot-navi":"https://github.com/Robbyant/lingbot-navi",
+"hy4-flash-dfly2-b6":"https://github.com/Tencent/AngelSpec",
+"ds-v4-1-flash-dfly2-b6":"https://github.com/Tencent/AngelSpec",
+"glm-5-3-flash-dfly2-b6":"https://github.com/Tencent/AngelSpec",
+"hy-mt3-1-8b":"https://github.com/Tencent-Hunyuan/Hy-MT3",
+"hy-mt3-7b":"https://github.com/Tencent-Hunyuan/Hy-MT3",
+"hy-mt3-30b-a3b":"https://github.com/Tencent-Hunyuan/Hy-MT3",
+
 "amazon-transcribe-turbo":"https://aws.amazon.com/about-aws/whats-new/2026/11/transcribe-turbo-preview/",
 "sakana-namazu-small":"https://sakana.ai/namazu-small/",
 "soma-1x-lite":"https://www.amini.ai/blog-post/amini-releases-soma-an-open-ai-model-to-take-nations-from-analogue-to-ai-ready",
